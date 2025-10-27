@@ -1,4 +1,11 @@
-/* Top header */
+/* Set global font to Times New Roman */
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  display: flex;
+}
+
+/* Top header across the full screen */
 .top-header {
   position: fixed;
   top: 0;
@@ -9,14 +16,16 @@
   border-bottom: 1px solid #eee;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  justify-content: center; /* centers the name */
+  font-weight: bold;
+  font-size: 20px;
   z-index: 100;
 }
 
 /* Left sidebar */
 .sidebar {
   position: fixed;
-  top: 60px; /* below the top header */
+  top: 60px; /* push below header */
   left: 0;
   width: 220px;
   bottom: 0;
@@ -27,7 +36,26 @@
   flex-direction: column;
 }
 
-/* Main content */
+/* Sidebar links */
+.nav-item {
+  color: #bbb;
+  text-decoration: none;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  background: #222;
+  color: #fff;
+}
+
+.nav-item.active {
+  background: #0d6efd;
+  color: #fff;
+}
+
+/* Main content adjusts for header + sidebar */
 .main-content {
   margin-left: 220px; /* same as sidebar width */
   margin-top: 60px;   /* same as header height */
