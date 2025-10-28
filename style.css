@@ -17,8 +17,8 @@ body {
 
 /* Header */
 header {
-    background-color: #001f3f; /* Dark navy */
-    color: #f5f5dc;
+    background-color: #001f3f;
+    color: #f5f5f5;
     height: 10vh;
     width: 100%;
     display: flex;
@@ -31,57 +31,59 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* subtle shadow */
 }
 
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 10vh; /* starts just below header */
+    top: 7.5vh; /* reduced by 2.5% */
     left: 0;
-    background-color: #001f3f; /* Dark navy */
+    background-color: #001f3f;
     width: 200px;
-    height: 87.5vh; /* slightly shorter than full height */
+    height: 92.5vh;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 0 10px 10px 0; /* Rounded right edge */
+    border-radius: 0 10px 10px 0;
     transition: width 0.3s;
 }
 
 /* Shrinking Sidebar */
 .sidebar.shrunk {
-    width: 60px; /* shrinks horizontally */
+    width: 60px;
 }
 
-/* Hamburger */
-#hamburger {
-    background-color: transparent;
-    border: none;
-    font-size: 1.5em;
-    color: #f5f5dc;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-/* Sidebar Links */
 .sidebar-links a {
     display: flex;
     align-items: center;
-    color: #f5f5dc;
+    color: #f5f5f5;
     text-decoration: none;
     padding: 15px 20px;
     margin: 5px 0;
     border-radius: 8px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .sidebar-links a:hover {
     background-color: #003366;
+    transform: translateX(5px); /* slight shift on hover */
 }
 
-.sidebar-links a span.title {
-    margin-left: 10px;
+/* Show only emoji when shrunk */
+.sidebar.shrunk .sidebar-links a span.title {
+    display: none;
+}
+
+/* Emoji hover bounce */
+.sidebar-links a span.emoji {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.sidebar-links a:hover span.emoji {
+    transform: translateY(-3px);
 }
 
 /* Dark/Light Mode Button */
@@ -91,17 +93,51 @@ header {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background-color: #003366;
-    color: #f5f5dc;
+    background-color: transparent; /* transparent bg */
+    color: #f5f5dc; /* beige lines */
+    font-weight: bold;
+    border: 2px solid #f5f5dc;
+    transition: background 0.3s, color 0.3s;
+}
+
+#toggle-dark:hover {
+    background-color: #f5f5dc;
+    color: #001f3f;
+}
+
+/* Hamburger lines */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #f5f5dc;
+    border-radius: 2px;
+    transition: all 0.3s;
 }
 
 /* Main Content */
 .content {
-    margin-left: 220px; /* Space for sidebar */
-    margin-top: 12vh; /* Space for header */
+    margin-left: 220px;
+    margin-top: 12vh;
     padding: 30px;
     background-color: transparent;
     color: #001f3f;
+    transition: color 0.3s, background 0.3s;
+}
+
+/* Section divider lines */
+.content hr {
+    border: none;
+    border-top: 1px solid #003366;
+    margin: 20px 0;
 }
 
 /* Light Mode */
@@ -110,13 +146,9 @@ body.light-mode {
     color: #001f3f;
 }
 
-body.light-mode .sidebar {
-    background-color: #001f3f; /* keep navy sidebar in light mode */
-}
-
+body.light-mode .sidebar,
 body.light-mode header {
-    background-color: #001f3f; /* keep navy header */
-    color: #f5f5dc;
+    background-color: #001f3f; /* keep sidebar/nav dark */
 }
 
 body.light-mode .sidebar-links a {
@@ -124,25 +156,21 @@ body.light-mode .sidebar-links a {
 }
 
 body.light-mode #toggle-dark {
-    background-color: #003366;
+    border-color: #f5f5dc;
     color: #f5f5dc;
 }
 
 /* Dark Mode */
 body:not(.light-mode) {
-    background-color: #001f3f; /* Dark navy background */
-    color: #f5f5dc; /* Beige text */
+    background-color: #001f3f;
+    color: #f5f5dc;
 }
 
 body:not(.light-mode) .content {
     color: #f5f5dc;
 }
 
-body:not(.light-mode .sidebar-links a) {
-    color: #f5f5dc;
-}
-
 body:not(.light-mode) #toggle-dark {
-    background-color: #003366;
+    border-color: #f5f5dc;
     color: #f5f5dc;
 }
