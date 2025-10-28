@@ -2,48 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel McL Franks II</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-links">
             <a href="index.html">🏠 Home</a>
-            <a href="about.html">📝 About Me</a>
-            <a href="portfolio.html">📁 Portfolio</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="portfolio.html">🗂 Portfolio</a>
             <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">🔧 Resources</a>
+            <a href="resources.html">📚 Resources</a>
             <a href="sports.html">🏀 Sports</a>
             <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">🌐 Social Media</a>
+            <a href="social.html">📱 Social Media</a>
             <a href="contact.html">✉️ Contact</a>
         </div>
         <button id="toggle-dark">Toggle Dark/Light Mode</button>
     </div>
 
     <!-- Header -->
-    <header>
-        Samuel McL Franks II
-    </header>
+    <header>Samuel McL Franks II</header>
 
     <!-- Main Content -->
     <div class="content">
-        <h1>Welcome to My Personal Page</h1>
-        <p>
-            This is where your homepage content lives. Right now it includes NBA-related content, your interests, and anything else you want on your front page. You can expand this with as many paragraphs as you like.
-        </p>
-        <p>
-            Keep your content organized, but the sidebar allows navigation to all other pages, keeping everything consistent.
-        </p>
-        <!-- Add more paragraphs as needed -->
+        <h2>Welcome to my personal page</h2>
+        <p>This is where you can find information about me, my work, interests, and contact info.</p>
     </div>
 
-    <!-- Dark/Light Mode Script -->
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
+        const toggleBtn = document.getElementById('toggle-dark');
+        toggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
         });
     </script>
