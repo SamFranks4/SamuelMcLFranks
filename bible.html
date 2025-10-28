@@ -1,134 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bible Verses - Samuel McL Franks II</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Times+New+Roman&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Times New Roman", serif;
-      background-color: #f5f0e6; /* soft beige background */
-      color: #0a1a2f; /* dark navy text */
-    }
-
-    header {
-      background-color: #0a1a2f;
-      color: #f5f0e6;
-      text-align: center;
-      padding: 20px;
-      font-family: 'Caveat', cursive;
-      font-size: 2.5em;
-      letter-spacing: 1px;
-    }
-
-    .sidebar {
-      position: fixed;
-      top: 80px;
-      left: 0;
-      width: 220px;
-      height: calc(100% - 80px);
-      background-color: #0a1a2f;
-      color: #f5f0e6;
-      padding: 20px;
-      border-top-right-radius: 20px;
-    }
-
-    .sidebar a {
-      display: block;
-      color: #f5f0e6;
-      text-decoration: none;
-      margin-bottom: 15px;
-      font-size: 18px;
-      transition: color 0.2s ease;
-    }
-
-    .sidebar a:hover {
-      color: #b3c7e6;
-    }
-
-    main {
-      margin-left: 260px;
-      padding: 40px;
-      max-width: 800px;
-    }
-
-    h2 {
-      font-family: 'Caveat', cursive;
-      color: #0a1a2f;
-      font-size: 2em;
-      border-bottom: 2px solid #0a1a2f;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
-
-    .verse {
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-
-    .reference {
-      font-weight: bold;
-      font-size: 1.1em;
-      margin-bottom: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Verses - Samuel McL Franks II</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>Samuel McL Franks II</header>
-
-  <div class="sidebar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="resume.html">Resume</a>
-    <a href="resources.html">Resources</a>
-    <a href="bible.html">Bible Verses</a>
-  </div>
-
-  <main>
-    <h2>Bible Verses</h2>
-
-    <div class="verse">
-      <div class="reference">Romans 7:19–22 (ESV)</div>
-      <p>For I do not do the good I want, but the evil I do not want is what I keep on doing. Now if I do what I do not want, it is no longer I who do it, but sin that dwells within me. So I find it to be a law that when I want to do right, evil lies close at hand. For I delight in the law of God, in my inner being.</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="portfolio.html">🖼️ Portfolio</a>
+            <a href="resume.html">📄 Resume</a>
+            <a href="resources.html">📚 Resources</a>
+            <a href="sports.html">🏀 Sports</a>
+            <a href="bible.html">📖 Bible Verses</a>
+            <a href="social.html">📱 Social Media</a>
+            <a href="contact.html">✉️ Contact</a>
+        </div>
+        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
     </div>
 
-    <div class="verse">
-      <div class="reference">Colossians 1:10 (ESV)</div>
-      <p>So as to walk in a manner worthy of the Lord, fully pleasing to him, bearing fruit in every good work and increasing in the knowledge of God.</p>
+    <!-- Header -->
+    <header>Samuel McL Franks II</header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Bible Verses</h2>
+        <p>Here are some of my favorite Bible verses (ESV):</p>
+
+        <div class="verse">
+            <h3>Romans 7:19-22</h3>
+            <p>For I do not do the good I want, but the evil I do not want is what I keep on doing. ... For I delight in the law of God in my inner being, but I see in my members another law waging war against the law of my mind...</p>
+        </div>
+
+        <div class="verse">
+            <h3>Colossians 1:10</h3>
+            <p>So as to walk in a manner worthy of the Lord, fully pleasing to him, bearing fruit in every good work and increasing in the knowledge of God.</p>
+        </div>
+
+        <div class="verse">
+            <h3>James 2:10</h3>
+            <p>For whoever keeps the whole law but fails in one point has become accountable for all of it.</p>
+        </div>
+
+        <div class="verse">
+            <h3>Proverbs 18:24</h3>
+            <p>A man of many companions may come to ruin, but there is a friend who sticks closer than a brother.</p>
+        </div>
+
+        <div class="verse">
+            <h3>Mark 11:23</h3>
+            <p>Truly, I say to you, whoever says to this mountain, ‘Be taken up and thrown into the sea,’ and does not doubt in his heart, but believes that what he says will come to pass, it will be done for him.</p>
+        </div>
+
+        <div class="verse">
+            <h3>1 Corinthians 6:18</h3>
+            <p>Flee from sexual immorality. Every other sin a person commits is outside the body, but the sexually immoral person sins against his own body.</p>
+        </div>
+
+        <div class="verse">
+            <h3>Mark 9:43</h3>
+            <p>And if your hand causes you to sin, cut it off. It is better for you to enter life crippled than with two hands to go to hell, to the unquenchable fire.</p>
+        </div>
+
+        <div class="verse">
+            <h3>Ecclesiastes 7:15</h3>
+            <p>In this meaningless life of mine I have seen both of these: the righteous perishing in their righteousness, and the wicked living long in their wickedness.</p>
+        </div>
     </div>
 
-    <div class="verse">
-      <div class="reference">James 2:10 (ESV)</div>
-      <p>For whoever keeps the whole law but fails in one point has become guilty of all of it.</p>
-    </div>
-
-    <div class="verse">
-      <div class="reference">Proverbs 18:24 (ESV)</div>
-      <p>A man of many companions may come to ruin, but there is a friend who sticks closer than a brother.</p>
-    </div>
-
-    <div class="verse">
-      <div class="reference">Mark 11:23 (ESV)</div>
-      <p>Truly, I say to you, whoever says to this mountain, ‘Be taken up and thrown into the sea,’ and does not doubt in his heart, but believes that what he says will come to pass, it will be done for him.</p>
-    </div>
-
-    <div class="verse">
-      <div class="reference">1 Corinthians 6:18 (ESV)</div>
-      <p>Flee from sexual immorality. Every other sin a person commits is outside the body, but the sexually immoral person sins against his own body.</p>
-    </div>
-
-    <div class="verse">
-      <div class="reference">Mark 9:43 (ESV)</div>
-      <p>And if your hand causes you to sin, cut it off. It is better for you to enter life crippled than with two hands to go to hell, to the unquenchable fire.</p>
-    </div>
-
-    <div class="verse">
-      <div class="reference">Ecclesiastes 7:15 (ESV)</div>
-      <p>In my vain life I have seen everything. There is a righteous man who perishes in his righteousness, and there is a wicked man who prolongs his life in his evil-doing.</p>
-    </div>
-  </main>
+    <script>
+        const toggleButton = document.getElementById('toggle-dark');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
