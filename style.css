@@ -61,15 +61,18 @@ header {
     flex-shrink: 0;
     width: calc(100% - 200px);
     margin-left: 200px;
-    border-radius: 0 0 10px 0; /* Rounded bottom edge */
+    border-radius: 0 0 10px 0;
 }
 
 /* Main Content */
 .content {
     flex: 1;
-    padding: 50px 40px; /* More spacing for comfortable reading */
+    padding: 50px 40px;
     margin-left: 200px;
-    line-height: 1.8; /* Adds space between lines */
+    line-height: 1.8;
+    background-color: #fdf6e3; /* Soft beige for main area */
+    color: #001f3f; /* Text color for readability */
+    border-radius: 0 10px 10px 0; /* Rounded edges */
 }
 
 /* Light Mode */
