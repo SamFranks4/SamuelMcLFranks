@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Samuel McL Franks II</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <title>About Me</title>
+    <!-- Global CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- About Me specific styles -->
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>Samuel McL Franks II</header>
+
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-links">
             <a href="index.html">🏠 Home</a>
             <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">🖼️ Portfolio</a>
+            <a href="portfolio.html">💼 Portfolio</a>
             <a href="resume.html">📄 Resume</a>
             <a href="resources.html">📚 Resources</a>
             <a href="sports.html">🏀 Sports</a>
@@ -21,40 +32,29 @@
             <a href="social.html">📱 Social Media</a>
             <a href="contact.html">✉️ Contact</a>
         </div>
-        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
+        <button id="toggle-dark">Toggle Dark/Light Mode</button>
     </div>
 
-    <!-- Header -->
-    <header>Samuel McL Franks II</header>
-
-    <!-- Main Content -->
+    <!-- Main content -->
     <div class="content">
-        <h2>About Me</h2>
-        <p>I am from Aberdeen, South Dakota, and have lived there my entire life. Growing up in this close-knit community has instilled in me strong values of hard work, commitment, and loyalty. I have always valued education and personal development, and my hometown has provided a solid foundation for both. My upbringing has shaped the person I am today, both in character and ambition.</p>
-
-        <p>Currently, I am attending Trinity Bible College & Graduate School, pursuing my Master's in Business Administration. My academic journey has been deeply engaging, blending practical business knowledge with the principles of ethics and leadership. This program challenges me to think critically, plan strategically, and grow intellectually while balancing other aspects of my life.</p>
-
-        <p>One of my strongest professional skills is my proficiency with Artificial Intelligence. I have dedicated significant time to understanding AI applications and integrating them into practical scenarios. This skill not only helps me stay ahead in technology but also equips me to contribute innovatively to any professional environment.</p>
-
-        <p>Outside of academics, I am very active in sports. Basketball is a major passion of mine, and I enjoy training rigorously as a member of the college basketball team. I also participate in soccer, which helps me maintain agility, coordination, and teamwork. Sports are more than just activities; they are a way to cultivate discipline, resilience, and leadership qualities.</p>
-
-        <p>My long-term goals include developing a thorough understanding of the stock market and trading strategies. I am fascinated by finance and investments and aim to use my skills and knowledge to navigate these areas confidently. Combining analytical thinking with practical experience is central to achieving these ambitions.</p>
-
-        <p>On a personal note, I have a dynamic family that includes two brothers, a half-sister, and our beloved dog, Leo. Spending time with family brings balance and joy to my life. I value relationships deeply and believe in nurturing connections that inspire growth and support.</p>
-
-        <p>I find inspiration in people like Stephen Curry, particularly in how openly he demonstrates his Christian faith. Observing such role models encourages me to live authentically, embrace challenges, and remain committed to my values in every aspect of life.</p>
-
-        <p>My faith plays a central role in my life. I am a devoted Christian and regularly attend Bethlehem Lutheran Church. My spiritual journey provides guidance, purpose, and a framework for decision-making. I strive to reflect my beliefs through actions, attitudes, and interactions with others.</p>
-
-        <p>Being grounded in faith and community, I aim to grow holistically—personally, professionally, and spiritually. I seek to balance ambition with compassion, intellectual growth with humility, and achievement with service. Each day presents opportunities to live intentionally and meaningfully.</p>
-
-        <p>Overall, I am committed to pursuing excellence in all areas of life, whether in education, sports, faith, or personal development. I welcome challenges, embrace learning, and aim to inspire those around me through dedication, perseverance, and integrity. This page represents not just a summary of who I am but a reflection of my ongoing journey.</p>
+        <h1>About Me</h1>
+        <p>I am from Aberdeen, SD, and I have lived here my entire life. My community and upbringing have shaped the person I am today, instilling in me a sense of responsibility and dedication.</p>
+        <p>Currently, I am attending Trinity Bible College & Graduate School, pursuing my Master's in Business Administration. My education is focused on equipping me with the skills necessary to thrive in both the professional and personal aspects of life.</p>
+        <p>One of my key strengths is my proficiency with Artificial Intelligence, which I have developed through both academic studies and personal exploration. I enjoy applying AI concepts in practical situations, which I believe is a highly valuable skill in today’s workforce.</p>
+        <p>In my free time, I am actively involved in sports. I play basketball and soccer for my college teams, dedicating myself to training and teamwork. These activities help me maintain discipline, resilience, and a strong work ethic.</p>
+        <p>My long-term goals include gaining a deep understanding of the stock market and trading strategies. I am passionate about investing and continuously educate myself to make informed financial decisions.</p>
+        <p>On a personal level, I come from a family with two brothers, a half-sister, and a dog named Leo. Family life and relationships are very important to me, shaping my values and guiding my daily decisions.</p>
+        <p>I find inspiration in individuals who combine talent with integrity. Stephen Curry, for example, impresses me with his transparency and devotion to his Christian faith, which motivates me to integrate my faith with my ambitions.</p>
+        <p>My faith is central to my life. I am a devoted Christian and regularly attend Bethlehem Lutheran Church. My faith informs my values, decisions, and interactions with others, providing guidance and purpose.</p>
+        <p>In all aspects of life, I strive for balance — combining education, sports, faith, family, and personal growth. Each area complements the other, helping me become a well-rounded individual.</p>
+        <p>Overall, I am committed to lifelong learning, personal development, and meaningful engagement with my community. I aim to live a life that reflects my principles and ambitions while remaining grounded in faith and family.</p>
     </div>
 
+    <!-- Optional: JS for Dark/Light Mode -->
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        const toggle = document.getElementById("toggle-dark");
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
         });
     </script>
 </body>
