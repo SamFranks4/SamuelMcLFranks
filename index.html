@@ -8,49 +8,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <button id="sidebar-toggle" class="hamburger">☰</button>
-        <div class="sidebar-links">
-            <a href="index.html">🏠 <span class="title">Home</span></a>
-            <a href="about.html">👤 <span class="title">About Me</span></a>
-            <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
-            <a href="resume.html">📄 <span class="title">Resume</span></a>
-            <a href="resources.html">📚 <span class="title">Resources</span></a>
-            <a href="sports.html">🏀 <span class="title">Sports</span></a>
-            <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
-            <a href="social.html">🌐 <span class="title">Social Media</span></a>
-            <a href="contact.html">✉️ <span class="title">Contact</span></a>
-        </div>
-        <button id="toggle-dark">Toggle Dark Mode</button>
-    </div>
-
-    <!-- Header -->
     <header>
         Samuel McL Franks II
     </header>
 
-    <!-- Main Content -->
-    <div class="content">
-        <h1>Welcome!</h1>
-        <p>This is your homepage content. Add text, images, or anything you want here.</p>
+    <div class="sidebar">
+        <button id="sidebar-toggle">&#9776;</button>
+        <div class="sidebar-links">
+            <a href="index.html"><span class="emoji">🏠</span><span class="title">Home</span></a>
+            <a href="about.html"><span class="emoji">👤</span><span class="title">About Me</span></a>
+            <a href="portfolio.html"><span class="emoji">💼</span><span class="title">Portfolio</span></a>
+            <a href="resume.html"><span class="emoji">📄</span><span class="title">Resume</span></a>
+            <a href="resources.html"><span class="emoji">📚</span><span class="title">Resources</span></a>
+            <a href="sports.html"><span class="emoji">🏀</span><span class="title">Sports</span></a>
+            <a href="bible.html"><span class="emoji">📖</span><span class="title">Bible Verses</span></a>
+            <a href="social.html"><span class="emoji">📱</span><span class="title">Social Media</span></a>
+            <a href="contact.html"><span class="emoji">✉️</span><span class="title">Contact</span></a>
+        </div>
+        <button id="toggle-dark">🌙</button>
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        const sidebar = document.querySelector('.sidebar');
-        const toggleBtn = document.getElementById('sidebar-toggle');
-        const darkBtn = document.getElementById('toggle-dark');
+    <main class="content">
+        <h1>Welcome to My Personal Page</h1>
+        <p>This is where your main content will go.</p>
+    </main>
 
-        toggleBtn.addEventListener('click', () => {
+    <script>
+        const toggleDarkBtn = document.getElementById('toggle-dark');
+        const body = document.body;
+
+        toggleDarkBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+        });
+
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+
+        sidebarToggle.addEventListener('click', () => {
             sidebar.classList.toggle('shrunk');
             document.querySelectorAll('.sidebar-links .title').forEach(el => {
                 el.style.display = sidebar.classList.contains('shrunk') ? 'none' : 'inline';
             });
-        });
-
-        darkBtn.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
         });
     </script>
 </body>
