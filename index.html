@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel McL Franks II</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel McL Franks II</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        Samuel McL Franks II
-    </header>
 
-    <div class="sidebar">
-        <div id="hamburger">☰</div>
-        <div class="sidebar-links">
-            <a href="index.html">🏠<span class="title">Home</span></a>
-            <a href="about.html">👤<span class="title">About Me</span></a>
-            <a href="portfolio.html">🗂️<span class="title">Portfolio</span></a>
-            <a href="resume.html">📄<span class="title">Resume</span></a>
-            <a href="resources.html">📚<span class="title">Resources</span></a>
-            <a href="sports.html">🏀<span class="title">Sports</span></a>
-            <a href="bible.html">📖<span class="title">Bible Verses</span></a>
-            <a href="social.html">📱<span class="title">Social Media</span></a>
-            <a href="contact.html">✉️<span class="title">Contact</span></a>
-        </div>
-        <button id="toggle-dark">🌙</button>
-    </div>
+<header>Samuel McL Franks II</header>
 
-    <main class="content">
-        <p>Welcome to my homepage! Here you can find information about me, my projects, and my interests.</p>
-        <p>This is the space where the content slides over when the sidebar collapses.</p>
-    </main>
+<div class="sidebar">
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="sidebar-links">
+    <a href="index.html"><span class="emoji">🏠</span><span class="title">Home</span></a>
+    <a href="about.html"><span class="emoji">👤</span><span class="title">About Me</span></a>
+    <a href="portfolio.html"><span class="emoji">💼</span><span class="title">Portfolio</span></a>
+    <a href="resume.html"><span class="emoji">📄</span><span class="title">Resume</span></a>
+    <a href="resources.html"><span class="emoji">📚</span><span class="title">Resources</span></a>
+    <a href="sports.html"><span class="emoji">🏀</span><span class="title">Sports</span></a>
+    <a href="bible.html"><span class="emoji">📖</span><span class="title">Bible Verses</span></a>
+    <a href="social.html"><span class="emoji">🌐</span><span class="title">Social Media</span></a>
+    <a href="contact.html"><span class="emoji">✉️</span><span class="title">Contact</span></a>
+  </div>
+  <button id="toggle-dark">🌙</button>
+</div>
 
-    <script>
-        const sidebar = document.querySelector('.sidebar');
-        const content = document.querySelector('.content');
-        const hamburger = document.querySelector('#hamburger');
-        const toggleDark = document.querySelector('#toggle-dark');
+<div class="content">
+  <h2>Welcome</h2>
+  <p>Start adding your homepage content here...</p>
+</div>
 
-        hamburger.addEventListener('click', () => {
-            sidebar.classList.toggle('shrunk');
-            content.classList.toggle('shrunk');
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.querySelector('.sidebar');
+  const body = document.body;
+  const toggleButton = document.getElementById('toggle-dark');
 
-            // Hide/show labels
-            const titles = document.querySelectorAll('.sidebar-links .title');
-            titles.forEach(t => t.style.display = sidebar.classList.contains('shrunk') ? 'none' : 'inline');
-        });
+  // Collapse sidebar
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('shrunk');
+    document.querySelectorAll('.sidebar-links .title').forEach(el => {
+      el.style.display = sidebar.classList.contains('shrunk') ? 'none' : 'inline';
+    });
+    document.querySelector('.content').style.marginLeft = sidebar.classList.contains('shrunk') ? '60px' : '220px';
+  });
 
-        toggleDark.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-        });
-    </script>
+  // Dark/Light toggle
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+  });
+</script>
+
 </body>
 </html>
