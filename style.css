@@ -50,10 +50,16 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* pushes toggle to bottom */
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.2);
   padding-top: 70px; /* aligns under header */
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar a {
@@ -70,50 +76,23 @@ header {
   background-color: #003366;
 }
 
+/* Dark/Light Toggle Button */
 .sidebar button {
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
-  background-color: #003366;
-  color: #f5f0e6;
-  border: none;
-  border-radius: 5px;
+  width: 90%;
+  font-size: 18px;
+  padding: 12px;
+  background-color: #ffcc00; /* bright accent */
+  color: #001f3f;
+  border: 2px solid #001f3f;
+  border-radius: 20px;
   cursor: pointer;
-  margin-top: auto;
+  margin: 20px auto;
+  transition: all 0.3s;
 }
 
 .sidebar button:hover {
-  background-color: #0055a5;
-}
-
-/* Sports Sidebar */
-.sports-sidebar {
-  width: 220px;
-  background-color: #1e2a44;
-  color: #e0e0e0;
-  padding: 15px;
-  margin-left: 220px;
-  margin-top: 90px;
-  border-radius: 10px;
-  position: fixed;
-  top: 70px;
-  left: 200px;
-  height: calc(100vh - 70px);
-  overflow-y: auto;
-  display: none;
-}
-
-.sports-sidebar h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-.sports-sidebar ul {
-  list-style-type: none;
-}
-
-.sports-sidebar li {
-  margin-bottom: 10px;
+  background-color: #ffd633;
+  transform: scale(1.05);
 }
 
 /* Main Content */
@@ -150,11 +129,13 @@ body.dark-mode .sidebar a:hover {
   background-color: #2b3a5c;
 }
 
-body.dark-mode .sports-sidebar {
-  background-color: #253153;
-}
-
 body.dark-mode .content {
   background-color: #1a2238;
   color: #e0e0e0;
+}
+
+body.dark-mode .sidebar button {
+  background-color: #ffcc00;
+  color: #001f3f;
+  border: 2px solid #e0e0e0;
 }
