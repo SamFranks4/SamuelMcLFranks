@@ -11,23 +11,23 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f5f5dc; /* Beige background */
+    background-color: #f5f5dc; /* Beige */
     color: #001f3f; /* Navy text */
 }
 
 /* Header */
 header {
     background-color: #001f3f; /* Dark navy */
-    color: #f5f5f5;
-    height: 10vh; /* Slim height */
-    width: 100%; /* Full width across screen */
+    color: #f5f5dc; /* Beige text */
+    height: 10vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Caveat', cursive;
     font-size: 2em;
     border-radius: 0 0 10px 0;
-    border-bottom: 2px solid #f5f5dc; /* Beige outline */
+    border: 2px solid #f5f5dc;
     position: fixed;
     top: 0;
     left: 0;
@@ -37,30 +37,40 @@ header {
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 10vh; /* Start below header */
+    top: 10vh;
     left: 0;
-    background-color: #001f3f; /* Dark navy */
+    background-color: #001f3f;
     width: 200px;
-    height: 90vh; /* Fill remaining page height */
+    height: 90vh;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0 10px 10px 0;
-    border-right: 2px solid #f5f5dc; /* Beige outline */
+    border: 2px solid #f5f5dc;
     transition: width 0.3s;
 }
 
-/* Shrinking Sidebar */
+/* Shrunk Sidebar */
 .sidebar.shrunk {
-    width: 60px; /* Shrinks horizontally */
+    width: 60px;
+}
+
+/* Hamburger */
+#hamburger {
+    cursor: pointer;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: #f5f5dc;
 }
 
 /* Sidebar Links */
 .sidebar-links a {
     display: flex;
     align-items: center;
-    color: #f5f5f5;
+    color: #f5f5dc;
     text-decoration: none;
     padding: 15px 20px;
     margin: 5px 0;
@@ -83,59 +93,37 @@ header {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background-color: transparent;
+    background-color: #003366;
     color: #f5f5dc;
-    font-size: 1.5em;
 }
 
 /* Main Content */
 .content {
-    margin-left: 220px; /* Space for sidebar */
-    margin-top: 12vh; /* Space for header */
+    margin-left: 220px;
+    margin-top: 12vh;
     padding: 30px;
-    background-color: transparent; /* Inherit body background */
-    color: #001f3f; /* Navy text in light mode */
+    transition: margin-left 0.3s;
+    background-color: transparent;
+}
+
+/* Content slides with sidebar */
+.content.shrunk {
+    margin-left: 60px;
 }
 
 /* Light Mode */
 body.light-mode {
-    background-color: #f5f5dc; /* Beige background */
-    color: #001f3f; /* Navy text */
+    background-color: #f5f5dc;
+    color: #001f3f;
 }
 
+body.light-mode header,
 body.light-mode .sidebar {
-    background-color: #001f3f; /* Keep sidebar dark navy */
-}
-
-body.light-mode header {
-    background-color: #001f3f; /* Keep header dark navy */
-    color: #f5f5f5;
-}
-
-body.light-mode .sidebar-links a {
+    background-color: #001f3f; /* Keep dark navy */
     color: #f5f5dc;
 }
 
 body.light-mode #toggle-dark {
-    background-color: transparent;
-    color: #f5f5dc;
-}
-
-/* Dark Mode */
-body:not(.light-mode) {
-    background-color: #001f3f; /* Dark navy background */
-    color: #f5f5dc; /* Beige text */
-}
-
-body:not(.light-mode) .content {
-    color: #f5f5dc; /* Beige text in main content */
-}
-
-body:not(.light-mode .sidebar-links a) {
-    color: #f5f5dc;
-}
-
-body:not(.light-mode) #toggle-dark {
-    background-color: transparent;
+    background-color: #003366;
     color: #f5f5dc;
 }
