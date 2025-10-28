@@ -61,7 +61,7 @@ header {
     flex-shrink: 0;
     width: calc(100% - 200px);
     margin-left: 200px;
-    border-radius: 0 0 10px 0;
+    border-radius: 0 0 10px 0; /* Rounded bottom edge */
 }
 
 /* Main Content */
