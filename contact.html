@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Samuel McL Franks II</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* Same CSS as other pages */
-    body { margin:0; font-family:"Times New Roman", serif; background-color:#fdf5e6; display:flex; min-height:100vh; color:#222; overflow-x:hidden;}
-    header {position:fixed; top:0; left:0; width:100%; height:80px; background-color:#001f3f; color:#ffe5b4; display:flex; align-items:center; justify-content:center; font-family:'Caveat', cursive; font-size:2.8rem; z-index:10; border-bottom-right-radius:20px; box-shadow:0 2px 10px rgba(0,0,0,0.2);}
-    .sidebar {width:220px; background-color:#001f3f; position:fixed; top:80px; left:0; bottom:0; display:flex; flex-direction:column; align-items:center; padding-top:20px; border-top-right-radius:12px; border-bottom-right-radius:12px; box-shadow:2px 0 10px rgba(0,0,0,0.2);}
-    .sidebar a {color:white; text-decoration:none; padding:12px 0; width:100%; text-align:center; transition:background 0.3s; border-radius:10px;}
-    .sidebar a:hover {background-color:#003366;}
-    .sidebar a.active {background-color:#00264d;}
-    .subheader {margin-left:220px; margin-top:100px; padding-left:20px; font-size:28px; color:#001f3f; font-weight:bold;}
-    .main-content {flex:1; margin-left:220px; margin-top:80px; padding:40px; background-color:#fdf5e6; overflow-y:auto;}
-    .main-content section {max-width:800px; margin:20px auto; line-height:1.7;}
-    .main-content section p {font-size:18px; margin-bottom:20px;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Samuel McL Franks II</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>Samuel McL Franks II</header>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="portfolio.html">🖼️ Portfolio</a>
+            <a href="resume.html">📄 Resume</a>
+            <a href="resources.html">📚 Resources</a>
+            <a href="sports.html">🏀 Sports</a>
+            <a href="bible.html">📖 Bible Verses</a>
+            <a href="social.html">📱 Social Media</a>
+            <a href="contact.html">✉️ Contact</a>
+        </div>
+        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
+    </div>
 
-  <div class="sidebar">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About Me</a>
-    <a href="portfolio.html">💼 Portfolio</a>
-    <a href="resume.html">📄 Resume</a>
-    <a href="resources.html">📚 Resources</a>
-    <a href="social.html">📱 Social Media</a>
-    <a href="contact.html" class="active">✉️ Contact</a>
-    <a href="misc.html">✨ Miscellaneous</a>
-  </div>
+    <!-- Header -->
+    <header>Samuel McL Franks II</header>
 
-  <div class="main-content">
-    <div class="subheader">Contact</div>
-    <section>
-      <p>If you’d like to reach out, here’s the best way to contact me:</p>
-      <ul>
-        <li>Email: <a href="mailto:example@email.com">example@email.com</a></li>
-        <li>Phone: (123) 456-7890</li>
-        <li>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></li>
-      </ul>
-      <p>You can also fill out a contact form or message me via social media platforms listed on the Social Media page.</p>
-    </section>
-  </div>
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Contact Me</h2>
+        <p>You can reach me through any of the following methods:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:samfranks2007@gmail.com">samfranks2007@gmail.com</a></li>
+            <li><strong>Phone:</strong> 605-380-3938</li>
+            <li><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourprofile</a></li>
+        </ul>
+
+        <h3>Send a Message</h3>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your Name"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Your Email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-dark');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
