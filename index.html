@@ -2,45 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel McL Franks II</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="sidebar-links">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">🗂 Portfolio</a>
-            <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">📚 Resources</a>
-            <a href="sports.html">🏀 Sports</a>
-            <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">💬 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
-        </div>
-        <button id="toggle-dark">Toggle Dark/Light</button>
-    </div>
-
     <header>
         Samuel McL Franks II
     </header>
 
-    <main class="content">
-        <h1>Welcome to my personal page</h1>
-        <p>
-            This is your homepage content. Right now we can put in your NBA stuff here, 
-            or whatever else you want to highlight. The text is navy blue and the background is beige.
-        </p>
-        <p>
-            Add more paragraphs here as needed. Everything will stay aligned and readable.
-        </p>
-    </main>
+    <div class="sidebar" id="sidebar">
+        <div class="collapse-btn" id="collapse-btn">☰</div>
+        <div class="sidebar-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="portfolio.html">💼 Portfolio</a>
+            <a href="resume.html">📄 Resume</a>
+            <a href="resources.html">📚 Resources</a>
+            <a href="sports.html">🏀 Sports</a>
+            <a href="bible.html">📖 Bible Verses</a>
+            <a href="social.html">📱 Social Media</a>
+            <a href="contact.html">✉️ Contact</a>
+        </div>
+        <button id="toggle-dark">🌓 Dark/Light</button>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to my personal page!</h2>
+        <p>Here’s where your main content goes.</p>
+    </div>
 
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
+        const collapseBtn = document.getElementById('collapse-btn');
+        const sidebar = document.getElementById('sidebar');
+        collapseBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        const toggleDark = document.getElementById('toggle-dark');
+        toggleDark.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
         });
     </script>
