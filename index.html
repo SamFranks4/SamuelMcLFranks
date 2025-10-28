@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samuel McL Franks II</title>
   <!-- Caveat Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Sidebar -->
@@ -68,38 +68,37 @@
     </section>
   </div>
 
-  <!-- JavaScript for smooth scrolling and active link highlighting -->
   <script>
-    const navItems = document.querySelectorAll('.nav-item');
-    const sections = document.querySelectorAll('.section');
+    const navItems = document.querySelectorAll(".nav-item");
+    const sections = document.querySelectorAll(".section");
 
     // Smooth scroll
-    navItems.forEach(item => {
-      item.addEventListener('click', e => {
+    navItems.forEach((item) => {
+      item.addEventListener("click", (e) => {
         e.preventDefault();
-        const targetId = item.getAttribute('href').substring(1);
+        const targetId = item.getAttribute("href").substring(1);
         const targetSection = document.getElementById(targetId);
         window.scrollTo({
-          top: targetSection.offsetTop - 10, // adjust for padding
-          behavior: 'smooth'
+          top: targetSection.offsetTop - 10,
+          behavior: "smooth",
         });
       });
     });
 
     // Highlight active nav item while scrolling
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
         const sectionTop = section.offsetTop - 60;
         if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
+          current = section.getAttribute("id");
         }
       });
 
-      navItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('href').substring(1) === current) {
-          item.classList.add('active');
+      navItems.forEach((item) => {
+        item.classList.remove("active");
+        if (item.getAttribute("href").substring(1) === current) {
+          item.classList.add("active");
         }
       });
     });
