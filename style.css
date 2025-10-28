@@ -9,7 +9,7 @@
 /* Body */
 body {
     background-color: #001f3f; /* Dark Navy Blue */
-    color: #f5f5f5; /* Off-white text for contrast */
+    color: #f5f5f5;
     display: flex;
     min-height: 100vh;
 }
@@ -36,10 +36,10 @@ body {
 }
 
 .sidebar-links a:hover {
-    background-color: #003366; /* Slightly lighter navy on hover */
+    background-color: #003366;
 }
 
-/* Dark/Light Mode Button in Sidebar */
+/* Dark/Light Mode Button */
 #toggle-dark {
     margin: 20px;
     padding: 10px;
@@ -52,50 +52,37 @@ body {
 
 /* Header */
 header {
-    background-color: #001f3f; /* Same dark navy */
+    background-color: #001f3f;
     color: #f5f5f5;
     padding: 20px;
     text-align: center;
     font-family: 'Caveat', cursive;
     font-size: 2em;
     flex-shrink: 0;
-    width: calc(100% - 200px); /* Full width minus sidebar */
-    margin-left: 200px; /* Align with sidebar */
+    width: calc(100% - 200px);
+    margin-left: 200px;
     border-radius: 0 0 10px 0;
-}
-
-/* Top-right Image */
-.top-image-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.top-right-image {
-    max-width: 150px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 /* Main Content */
 .content {
     flex: 1;
     padding: 30px;
-    margin-left: 200px; /* Sidebar width */
+    margin-left: 200px;
 }
 
 /* Light Mode */
 body.light-mode {
-    background-color: #fdf6e3; /* Soft beige background */
-    color: #001f3f; /* Dark navy text */
+    background-color: #fdf6e3;
+    color: #001f3f;
 }
 
 body.light-mode .sidebar {
-    background-color: #cce0ff; /* Light blue sidebar in light mode */
+    background-color: #cce0ff;
 }
 
 body.light-mode header {
-    background-color: #cce0ff; /* Light blue header in light mode */
+    background-color: #cce0ff;
     color: #001f3f;
 }
 
