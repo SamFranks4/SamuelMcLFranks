@@ -3,21 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link rel="stylesheet" href="style.css">
+  <title>About Me | Samuel McL Franks II</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: #f4f6f8;
+      display: flex;
+      height: 100vh;
+      color: #222;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #001f3f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      margin: 12px 0;
+      font-size: 17px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    /* Header */
+    header {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-family: 'Caveat', cursive;
+      font-size: 40px;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    /* Section styles */
+    .about-section {
+      max-width: 800px;
+      margin: 50px auto;
+      line-height: 1.7;
+    }
+
+    .about-section h2 {
+      color: #001f3f;
+      font-size: 30px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="sidebar">
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About Me</a>
-    <a href="#">Social Media</a>
-    <a href="#">Contact</a>
-    <a href="#">Miscellaneous</a>
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👤 About Me</a>
+    <a href="social.html">📱 Social Media</a>
+    <a href="contact.html">✉️ Contact</a>
+    <a href="misc.html">✨ Miscellaneous</a>
   </div>
 
   <div class="main-content">
-    <h1>About Me</h1>
-    <p>Write something here that actually sounds like you — could be a quick bio, your story, or what drives you.</p>
+    <header>Samuel McL Franks II</header>
+
+    <section class="about-section">
+      <h2>About Me</h2>
+      <p>Welcome to my personal site. This page gives a little background on who I am and what I’m about.</p>
+      <p>I’m someone who values growth, creativity, and authenticity. Whether I’m working on new ideas, exploring new spaces, or connecting with others, I try to stay genuine and grounded.</p>
+      <p>This space will expand as I do — more projects, more thoughts, and more of what matters most to me.</p>
+      <p>Thanks for stopping by.</p>
+    </section>
   </div>
 </body>
 </html>
