@@ -21,8 +21,8 @@ body.dark-mode {
 
 /* Header */
 header {
-  width: calc(100% - 200px); /* stop before sidebar */
-  margin-left: 200px;
+  width: calc(100% - 201px); /* almost flush with sidebar (1px gap) */
+  margin-left: 201px;       /* tiny gap from sidebar */
   height: 70px;
   background-color: #001f3f; /* navy blue */
   color: #f5f0e6;
@@ -33,7 +33,7 @@ header {
   justify-content: center;
   position: fixed;
   top: 0;
-  left: 200px; /* align after sidebar */
+  left: 201px; /* aligns with margin-left */
   z-index: 1000;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
