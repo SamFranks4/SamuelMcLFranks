@@ -7,47 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         Samuel McL Franks II
     </header>
 
-    <div class="sidebar" id="sidebar">
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
         <div class="sidebar-links">
-            <a href="index.html">🏠 Home <span>Home</span></a>
-            <a href="about.html">👤 About Me <span>About Me</span></a>
-            <a href="portfolio.html">💼 Portfolio <span>Portfolio</span></a>
-            <a href="resume.html">📄 Resume <span>Resume</span></a>
-            <a href="resources.html">📚 Resources <span>Resources</span></a>
-            <a href="sports.html">🏀 Sports <span>Sports</span></a>
-            <a href="bible.html">📖 Bible Verses <span>Bible Verses</span></a>
-            <a href="social.html">📱 Social Media <span>Social Media</span></a>
-            <a href="contact.html">✉️ Contact <span>Contact</span></a>
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="portfolio.html">💼 Portfolio</a>
+            <a href="resume.html">📄 Resume</a>
+            <a href="resources.html">📚 Resources</a>
+            <a href="sports.html">🏀 Sports</a>
+            <a href="bible.html">📖 Bible Verses</a>
+            <a href="social.html">🌐 Social Media</a>
+            <a href="contact.html">✉️ Contact</a>
         </div>
-        <button id="toggle-dark">🌓 Dark/Light</button>
+
+        <!-- Dark/Light Mode Toggle -->
+        <label for="theme-toggle" class="theme-toggle">
+            <input type="checkbox" id="theme-toggle" aria-label="Toggle dark/light mode">
+            <span class="toggle-slider">
+                <span class="sun-icon">🌞</span>
+                <span class="moon-icon">🌙</span>
+            </span>
+        </label>
     </div>
 
+    <!-- Main Content -->
     <div class="content">
-        <h2>Welcome to my personal page!</h2>
-        <p>This is the main reading area. When the sidebar is collapsed, you have more horizontal space for text and content.</p>
+        <h1>Welcome to my Personal Page</h1>
+        <p>
+            This is the homepage content. Add your NBA text or any other info here.
+        </p>
     </div>
 
+    <!-- JavaScript for Dark/Light Mode -->
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const sidebar = document.getElementById('sidebar');
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
 
-        hamburger.addEventListener('click', () => {
-            sidebar.classList.toggle('expanded');
-        });
-
-        const toggleDark = document.getElementById('toggle-dark');
-        toggleDark.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
+        themeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode', themeToggle.checked);
         });
     </script>
+
 </body>
 </html>
