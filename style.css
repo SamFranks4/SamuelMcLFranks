@@ -16,13 +16,13 @@ body {
 /* Dark Mode - Softer Colors */
 body.dark-mode {
   background-color: #1a2238; /* softer dark blue */
-  color: #e0e0e0; /* light gray text */
+  color: #e0e0e0;
 }
 
 /* Header */
 header {
-  width: calc(100% - 201px); /* almost flush with sidebar (1px gap) */
-  margin-left: 201px;       /* tiny gap from sidebar */
+  width: calc(100% - 200px); /* header meets sidebar exactly */
+  margin-left: 200px;
   height: 70px;
   background-color: #001f3f; /* navy blue */
   color: #f5f0e6;
@@ -33,7 +33,7 @@ header {
   justify-content: center;
   position: fixed;
   top: 0;
-  left: 201px; /* aligns with margin-left */
+  left: 200px; /* aligned perfectly with sidebar */
   z-index: 1000;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -45,14 +45,15 @@ header {
   width: 200px;
   background-color: #001f3f;
   position: fixed;
-  top: 70px;
+  top: 0;
   left: 0;
-  height: calc(100vh - 70px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  padding-top: 70px; /* aligns under header */
 }
 
 .sidebar a {
@@ -69,7 +70,6 @@ header {
   background-color: #003366;
 }
 
-/* Sidebar Light/Dark Mode Toggle Button */
 .sidebar button {
   width: 100%;
   font-size: 20px;
@@ -79,6 +79,7 @@ header {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: auto;
 }
 
 .sidebar button:hover {
@@ -88,7 +89,7 @@ header {
 /* Sports Sidebar */
 .sports-sidebar {
   width: 220px;
-  background-color: #1e2a44; /* softer navy */
+  background-color: #1e2a44;
   color: #e0e0e0;
   padding: 15px;
   margin-left: 220px;
@@ -138,19 +139,19 @@ header {
 
 /* Dark Mode Overrides */
 body.dark-mode header {
-  background-color: #1b2a4b; /* slightly lighter header */
+  background-color: #1b2a4b;
 }
 
 body.dark-mode .sidebar {
-  background-color: #1e2a44; /* softer dark navy */
+  background-color: #1e2a44;
 }
 
 body.dark-mode .sidebar a:hover {
-  background-color: #2b3a5c; /* softer hover effect */
+  background-color: #2b3a5c;
 }
 
 body.dark-mode .sports-sidebar {
-  background-color: #253153; /* slightly lighter than sidebar */
+  background-color: #253153;
 }
 
 body.dark-mode .content {
