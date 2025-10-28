@@ -1,106 +1,162 @@
-/* General Reset */
+/* Reset default margins/padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body */
+/* Body - Light Mode Default */
 body {
-    background-color: #f5f5dc; /* Beige background */
-    color: #001f3f; /* Navy text */
-    min-height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f5f0e6; /* soft beige */
+  color: #000;
+  display: flex;
+}
+
+/* Dark Mode - Softer Colors */
+body.dark-mode {
+  background-color: #1a2238; /* softer dark blue */
+  color: #e0e0e0; /* light gray text */
 }
 
 /* Header */
 header {
-    background-color: #001f3f; /* Dark navy */
-    color: #f5f5f5;
-    height: 10vh; /* Slimmer height */
-    width: 100%; /* Full width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Caveat', cursive;
-    font-size: 2em;
-    border-radius: 0 0 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  width: calc(100% - 200px); /* stop before sidebar */
+  margin-left: 200px;
+  width: calc(100% - 201px); /* almost flush with sidebar (1px gap) */
+  margin-left: 201px;       /* tiny gap from sidebar */
+  height: 70px;
+  background-color: #001f3f; /* navy blue */
+  color: #f5f0e6;
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 200px; /* align after sidebar */
+  left: 201px; /* aligns with margin-left */
+  z-index: 1000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Sidebar */
 .sidebar {
-    position: fixed;
-    top: 10vh; /* starts directly under the header */
-    left: 0;
-    background-color: #001f3f; /* Dark navy */
-    width: 200px;
-    height: 90vh; /* fills remaining height */
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 0 10px 10px 0;
+  width: 200px;
+  background-color: #001f3f;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 }
 
-/* Sidebar Links */
-.sidebar-links a {
-    display: block;
-    color: #f5f5f5;
-    text-decoration: none;
-    padding: 15px 20px;
-    margin: 5px 0;
-    border-radius: 8px;
-    transition: background 0.3s;
+.sidebar a {
+  color: #f5f0e6;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 20px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
 }
 
-.sidebar-links a:hover {
-    background-color: #003366;
+.sidebar a:hover {
+  background-color: #003366;
 }
 
-/* Dark/Light Mode Button */
-#toggle-dark {
-    margin: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #003366;
-    color: #f5f5f5;
+/* Sidebar Light/Dark Mode Toggle Button */
+.sidebar button {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #003366;
+  color: #f5f0e6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #0055a5;
+}
+
+/* Sports Sidebar */
+.sports-sidebar {
+  width: 220px;
+  background-color: #1e2a44; /* softer navy */
+  color: #e0e0e0;
+  padding: 15px;
+  margin-left: 220px;
+  margin-top: 90px;
+  border-radius: 10px;
+  position: fixed;
+  top: 70px;
+  left: 200px;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  display: none;
+}
+
+.sports-sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.sports-sidebar ul {
+  list-style-type: none;
+}
+
+.sports-sidebar li {
+  margin-bottom: 10px;
 }
 
 /* Main Content */
 .content {
-    margin-left: 220px; /* Space for sidebar */
-    margin-top: 12vh; /* Space below the header */
-    padding: 30px;
-    background-color: #f5f5dc; /* Beige */
-    color: #001f3f;
+  margin-left: 220px;
+  margin-top: 90px;
+  padding: 20px;
+  background-color: #f5f0e6;
+  border-radius: 10px;
+  min-height: calc(100vh - 90px);
 }
 
-/* Light Mode */
-body.light-mode {
-    background-color: #eae6e0;
-    color: #001f3f;
+.content h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
 }
 
-body.light-mode .sidebar {
-    background-color: #cce0ff;
+.content p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 18px;
 }
 
-body.light-mode header {
-    background-color: #cce0ff;
-    color: #001f3f;
+/* Dark Mode Overrides */
+body.dark-mode header {
+  background-color: #1b2a4b; /* slightly lighter header */
 }
 
-body.light-mode .sidebar-links a {
-    color: #001f3f;
+body.dark-mode .sidebar {
+  background-color: #1e2a44; /* softer dark navy */
 }
 
-body.light-mode #toggle-dark {
-    background-color: #99bbff;
-    color: #001f3f;
+body.dark-mode .sidebar a:hover {
+  background-color: #2b3a5c; /* softer hover effect */
+}
+
+body.dark-mode .sports-sidebar {
+  background-color: #253153; /* slightly lighter than sidebar */
+}
+
+body.dark-mode .content {
+  background-color: #1a2238;
+  color: #e0e0e0;
 }
