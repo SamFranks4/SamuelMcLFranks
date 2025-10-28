@@ -67,12 +67,8 @@ header {
 /* Main Content */
 .content {
     flex: 1;
-    padding: 50px 40px;
+    padding: 30px;
     margin-left: 200px;
-    line-height: 1.8;
-    background-color: #fdf6e3; /* Soft beige for main area */
-    color: #001f3f; /* Text color for readability */
-    border-radius: 0 10px 10px 0; /* Rounded edges */
 }
 
 /* Light Mode */
