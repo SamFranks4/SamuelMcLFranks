@@ -67,8 +67,9 @@ header {
 /* Main Content */
 .content {
     flex: 1;
-    padding: 30px;
+    padding: 50px 40px; /* More spacing for comfortable reading */
     margin-left: 200px;
+    line-height: 1.8; /* Adds space between lines */
 }
 
 /* Light Mode */
