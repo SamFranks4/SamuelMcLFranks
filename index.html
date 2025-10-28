@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samuel McL Franks II</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel McL Franks II</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>Samuel McL Franks II</header>
+    <header>Samuel McL Franks II</header>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div>
-      <button id="hamburger">&#9776;</button>
-      <div class="sidebar-links">
-        <a href="index.html">🏠 <span class="title">Home</span></a>
-        <a href="about.html">👤 <span class="title">About Me</span></a>
-        <a href="portfolio.html">🗂️ <span class="title">Portfolio</span></a>
-        <a href="resume.html">📄 <span class="title">Resume</span></a>
-        <a href="resources.html">📚 <span class="title">Resources</span></a>
-        <a href="sports.html">🏀 <span class="title">Sports</span></a>
-        <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
-        <a href="social.html">🌐 <span class="title">Social Media</span></a>
-        <a href="contact.html">✉️ <span class="title">Contact</span></a>
-      </div>
+    <div class="sidebar">
+        <div class="sidebar-links">
+            <a href="index.html" class="active" title="Home">🏠 <span class="title">Home</span></a>
+            <a href="about.html" title="About Me">🧑 <span class="title">About Me</span></a>
+            <a href="portfolio.html" title="Portfolio">💼 <span class="title">Portfolio</span></a>
+            <a href="resume.html" title="Resume">📄 <span class="title">Resume</span></a>
+            <a href="resources.html" title="Resources">📚 <span class="title">Resources</span></a>
+            <a href="sports.html" title="Sports">🏀 <span class="title">Sports</span></a>
+            <a href="bible.html" title="Bible Verses">📖 <span class="title">Bible Verses</span></a>
+            <a href="social.html" title="Social Media">🌐 <span class="title">Social Media</span></a>
+            <a href="contact.html" title="Contact">✉️ <span class="title">Contact</span></a>
+        </div>
+        <button id="toggle-dark">Toggle Dark/Light</button>
+        <div class="hamburger" id="hamburger" title="Toggle Sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-    <button id="toggle-dark">Toggle Dark/Light</button>
-  </div>
 
-  <!-- Main Content -->
-  <div class="content">
-    <h1>Welcome to my Personal Page</h1>
-    <p>Put your NBA text or whatever you want on the homepage here.</p>
-  </div>
+    <main class="content">
+        <section>
+            <h2>Welcome!</h2>
+            <p>Insert your home page content here.</p>
+        </section>
+    </main>
 
-  <!-- JavaScript -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
+<script>
+    // Dark/Light mode toggle
+    const toggleBtn = document.getElementById('toggle-dark');
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+    });
+
+    // Shrinking sidebar toggle
     const sidebar = document.querySelector('.sidebar');
-    const sidebarTitles = document.querySelectorAll('.sidebar-links .title');
-    const toggleDark = document.getElementById('toggle-dark');
-
-    // Sidebar shrink/expand
+    const hamburger = document.getElementById('hamburger');
     hamburger.addEventListener('click', () => {
-      sidebar.classList.toggle('shrunk');
-      sidebarTitles.forEach(title => {
-        title.style.display = sidebar.classList.contains('shrunk') ? 'none' : 'inline';
-      });
+        sidebar.classList.toggle('shrunk');
     });
 
-    // Dark/light mode toggle
-    toggleDark.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
+    // Active link highlight
+    const links = document.querySelectorAll('.sidebar-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
     });
-  </script>
+</script>
 </body>
 </html>
