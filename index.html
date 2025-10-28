@@ -11,7 +11,7 @@
   <!-- Header -->
   <header>Samuel McL Franks II</header>
 
-  <!-- Sidebar -->
+  <!-- Main Sidebar -->
   <div class="sidebar">
     <a href="index.html">🏠 Home</a>
     <a href="about.html">👤 About Me</a>
@@ -20,6 +20,20 @@
     <a href="resources.html">🛠️ Resources</a>
     <a href="bible.html">📖 Bible Verses</a>
     <a href="contact.html">✉️ Contact</a>
+    <a href="#" id="sports-toggle">🏀 Sports</a>
+  </div>
+
+  <!-- Sports Sidebar -->
+  <div class="sports-sidebar" id="sports-sidebar">
+    <h3>Basketball Stats & Accolades 🏀</h3>
+    <ul>
+      <li>Points per game: 18.4</li>
+      <li>Assists per game: 5.2</li>
+      <li>Rebounds per game: 6.7</li>
+      <li>Team MVP: 2024</li>
+      <li>All-Conference: 2023</li>
+      <!-- Add more stats/achievements as needed -->
+    </ul>
   </div>
 
   <!-- Main Content -->
@@ -35,5 +49,21 @@
       The goal of this homepage is to combine professional info with personal interests so anyone visiting can get a well-rounded view of me.
     </p>
   </div>
+
+  <!-- Toggle Script -->
+  <script>
+    const sportsToggle = document.getElementById('sports-toggle');
+    const sportsSidebar = document.getElementById('sports-sidebar');
+
+    sportsSidebar.style.display = 'none'; // hidden by default
+
+    sportsToggle.addEventListener('click', () => {
+      if (sportsSidebar.style.display === 'none') {
+        sportsSidebar.style.display = 'block';
+      } else {
+        sportsSidebar.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
