@@ -8,43 +8,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-links">
             <a href="index.html">🏠 Home</a>
             <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">💼 Portfolio</a>
+            <a href="portfolio.html">🗂 Portfolio</a>
             <a href="resume.html">📄 Resume</a>
             <a href="resources.html">📚 Resources</a>
             <a href="sports.html">🏀 Sports</a>
             <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
+            <a href="social.html">💬 Social Media</a>
             <a href="contact.html">✉️ Contact</a>
         </div>
-        <button id="toggle-dark">🌙 Light/Dark Mode</button>
+        <button id="toggle-dark">Toggle Dark/Light</button>
     </div>
 
-    <!-- Header -->
     <header>
         Samuel McL Franks II
     </header>
 
-    <!-- Main Content -->
-    <div class="content">
+    <main class="content">
         <h1>Welcome to my personal page</h1>
         <p>
-            Here is some text talking about the NBA, just like before. Add your full paragraphs or content here as it was previously.
+            This is your homepage content. Right now we can put in your NBA stuff here, 
+            or whatever else you want to highlight. The text is navy blue and the background is beige.
         </p>
         <p>
-            More NBA content. Maintain all spacing and paragraphs exactly as they were.
+            Add more paragraphs here as needed. Everything will stay aligned and readable.
         </p>
-        <!-- Add additional paragraphs as needed -->
-    </div>
+    </main>
 
     <script>
-        // Dark/Light Mode Toggle
-        const toggle = document.getElementById('toggle-dark');
-        toggle.addEventListener('click', () => {
+        const toggleButton = document.getElementById('toggle-dark');
+        toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
         });
     </script>
