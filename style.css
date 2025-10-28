@@ -55,13 +55,17 @@ body {
 header {
     background-color: #001f3f; /* Dark navy */
     color: #f5f5f5;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-family: 'Caveat', cursive;
     font-size: 2em;
     flex-shrink: 0;
     width: calc(100% - 200px);
-    margin-left: 200px; /* matches sidebar width */
+    margin-left: 200px; /* aligns with sidebar */
+    height: 10vh; /* Header takes about 10% of screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0 0 10px 0;
 }
 
