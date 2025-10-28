@@ -9,16 +9,17 @@
 /* Body */
 body {
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
+    flex-direction: column;
     background-color: #f5f5dc; /* Beige background */
     color: #001f3f; /* Navy text */
+    scroll-behavior: smooth; /* Smooth scroll */
 }
 
 /* Header */
 header {
-    background-color: #001f3f;
-    color: #f5f5f5;
+    background-color: #001f3f; /* Dark navy */
+    color: #f5f5dc;
     height: 10vh;
     width: 100%;
     display: flex;
@@ -31,26 +32,25 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* subtle shadow */
 }
 
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 7.5vh; /* reduced by 2.5% */
+    top: 10vh;
     left: 0;
     background-color: #001f3f;
     width: 200px;
-    height: 92.5vh;
+    height: 87.5vh; /* 2.5% shorter */
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0 10px 10px 0;
     transition: width 0.3s;
+    z-index: 999;
 }
 
-/* Shrinking Sidebar */
 .sidebar.shrunk {
     width: 60px;
 }
@@ -58,68 +58,46 @@ header {
 .sidebar-links a {
     display: flex;
     align-items: center;
-    color: #f5f5f5;
+    color: #f5f5dc;
     text-decoration: none;
     padding: 15px 20px;
     margin: 5px 0;
     border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s;
+    position: relative;
 }
 
 .sidebar-links a:hover {
     background-color: #003366;
-    transform: translateX(5px); /* slight shift on hover */
 }
 
-/* Show only emoji when shrunk */
+.sidebar-links a.active {
+    background-color: #0055a5;
+}
+
+.sidebar-links a span.title {
+    margin-left: 10px;
+}
+
 .sidebar.shrunk .sidebar-links a span.title {
-    display: none;
+    display: none; /* Hide titles when shrunk */
 }
 
-/* Emoji hover bounce */
-.sidebar-links a span.emoji {
-    display: inline-block;
-    transition: transform 0.2s;
-}
-
-.sidebar-links a:hover span.emoji {
-    transform: translateY(-3px);
-}
-
-/* Dark/Light Mode Button */
-#toggle-dark {
-    margin: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: transparent; /* transparent bg */
-    color: #f5f5dc; /* beige lines */
-    font-weight: bold;
-    border: 2px solid #f5f5dc;
-    transition: background 0.3s, color 0.3s;
-}
-
-#toggle-dark:hover {
-    background-color: #f5f5dc;
-    color: #001f3f;
-}
-
-/* Hamburger lines */
+/* Hamburger */
 .hamburger {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 18px;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
     cursor: pointer;
+    margin: 20px auto;
 }
-
 .hamburger span {
-    display: block;
     height: 3px;
-    background-color: #f5f5dc;
+    background-color: #f5f5dc; /* Beige lines */
     border-radius: 2px;
+    display: block;
     transition: all 0.3s;
 }
 
@@ -130,14 +108,14 @@ header {
     padding: 30px;
     background-color: transparent;
     color: #001f3f;
-    transition: color 0.3s, background 0.3s;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
 }
 
-/* Section divider lines */
-.content hr {
-    border: none;
-    border-top: 1px solid #003366;
-    margin: 20px 0;
+/* Section separators */
+section {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 /* Light Mode */
@@ -146,9 +124,13 @@ body.light-mode {
     color: #001f3f;
 }
 
-body.light-mode .sidebar,
+body.light-mode .sidebar {
+    background-color: #001f3f; /* keep dark navy even in light mode */
+}
+
 body.light-mode header {
-    background-color: #001f3f; /* keep sidebar/nav dark */
+    background-color: #001f3f; /* keep header navy */
+    color: #f5f5dc;
 }
 
 body.light-mode .sidebar-links a {
@@ -156,7 +138,7 @@ body.light-mode .sidebar-links a {
 }
 
 body.light-mode #toggle-dark {
-    border-color: #f5f5dc;
+    background-color: #003366;
     color: #f5f5dc;
 }
 
@@ -167,10 +149,5 @@ body:not(.light-mode) {
 }
 
 body:not(.light-mode) .content {
-    color: #f5f5dc;
-}
-
-body:not(.light-mode) #toggle-dark {
-    border-color: #f5f5dc;
     color: #f5f5dc;
 }
