@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f5f5dc; /* Beige */
+    background-color: #f5f5dc; /* Beige background */
     color: #001f3f; /* Navy text */
 }
 
@@ -19,8 +19,8 @@ body {
 header {
     background-color: #001f3f; /* Dark navy */
     color: #f5f5f5;
-    height: 10vh;
-    width: 100%;
+    height: 10vh; /* Slim height */
+    width: 100%; /* Full width across screen */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,35 +36,24 @@ header {
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 10vh; /* directly below header */
+    top: 10vh; /* Start below header */
     left: 0;
-    background-color: #001f3f;
-    width: 220px;
-    height: 90vh;
+    background-color: #001f3f; /* Dark navy */
+    width: 200px;
+    height: 90vh; /* Fill remaining page height */
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0 10px 10px 0;
     transition: width 0.3s;
-    overflow: hidden;
 }
 
-/* Collapsed Sidebar */
-.sidebar.collapsed {
-    width: 60px;
+/* Shrinking Sidebar */
+.sidebar.shrunk {
+    width: 60px; /* Shrinks horizontally */
 }
 
-.sidebar-links .label {
-    transition: opacity 0.3s;
-}
-
-.sidebar.collapsed .sidebar-links .label {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Sidebar Links */
 .sidebar-links a {
     display: flex;
     align-items: center;
@@ -80,8 +69,8 @@ header {
     background-color: #003366;
 }
 
-.sidebar-links .emoji {
-    margin-right: 10px;
+.sidebar-links a span.title {
+    margin-left: 10px;
 }
 
 /* Dark/Light Mode Button */
@@ -97,33 +86,52 @@ header {
 
 /* Main Content */
 .content {
-    margin-left: 220px;
-    margin-top: 12vh;
+    margin-left: 220px; /* Space for sidebar */
+    margin-top: 12vh; /* Space for header */
     padding: 30px;
-    background-color: #f5f5dc; /* Beige */
-    color: #001f3f;
+    background-color: transparent; /* Inherit body background */
+    color: #001f3f; /* Navy text in light mode */
 }
 
 /* Light Mode */
 body.light-mode {
-    background-color: #001f3f; /* Dark navy */
-    color: #f5f5dc; /* Beige text */
+    background-color: #f5f5dc; /* Beige background */
+    color: #001f3f; /* Navy text */
 }
 
 body.light-mode .sidebar {
-    background-color: #003366;
+    background-color: #cce0ff; /* Light blue sidebar */
 }
 
 body.light-mode header {
-    background-color: #003366;
-    color: #f5f5dc;
+    background-color: #cce0ff;
+    color: #001f3f;
 }
 
 body.light-mode .sidebar-links a {
-    color: #f5f5dc;
+    color: #001f3f;
 }
 
 body.light-mode #toggle-dark {
-    background-color: #001f3f;
+    background-color: #99bbff;
+    color: #001f3f;
+}
+
+/* Dark Mode */
+body:not(.light-mode) {
+    background-color: #001f3f; /* Dark navy background */
+    color: #f5f5dc; /* Beige text */
+}
+
+body:not(.light-mode) .content {
+    color: #f5f5dc; /* Beige text in main content */
+}
+
+body:not(.light-mode .sidebar-links a) {
+    color: #f5f5dc;
+}
+
+body:not(.light-mode) #toggle-dark {
+    background-color: #003366;
     color: #f5f5dc;
 }
