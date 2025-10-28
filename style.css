@@ -36,11 +36,11 @@ header {
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 10vh; /* Start below header */
+    top: calc(10vh + 2.5%); /* Start below header plus extra 2.5% */
     left: 0;
     background-color: #001f3f; /* Dark navy */
     width: 200px;
-    height: 90vh; /* Fill remaining page height */
+    height: calc(90vh - 2.5%); /* Fill remaining page height */
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -73,6 +73,28 @@ header {
     margin-left: 10px;
 }
 
+/* Hamburger Button */
+#hamburger {
+    background: transparent; /* Transparent background */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    margin: 10px;
+}
+
+#hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #f5f5dc; /* Beige lines */
+    border-radius: 2px;
+}
+
 /* Dark/Light Mode Button */
 #toggle-dark {
     margin: 20px;
@@ -81,7 +103,7 @@ header {
     border-radius: 8px;
     cursor: pointer;
     background-color: #003366;
-    color: #f5f5f5;
+    color: #f5f5dc;
 }
 
 /* Main Content */
