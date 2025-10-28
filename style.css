@@ -39,20 +39,25 @@ body {
 
 /* Sidebar links */
 .nav-item {
-  color: #bbb; /* light gray text */
+  color: #bbb;
   text-decoration: none;
   margin-bottom: 15px;
   padding: 8px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+  transition: all 0.3s ease; /* smooth hover effect */
 }
 
 .nav-item:hover {
-  background: #333; /* slightly lighter charcoal on hover */
-  color: #1abc9c; /* teal accent on hover */
+  background: #333;
+  color: #1abc9c;
+  transform: translateX(5px); /* slight slide effect */
 }
 
 .nav-item.active {
-  background: #1abc9c; /* teal active tab */
+  background: #1abc9c;
   color: #fff;
 }
 
