@@ -1,95 +1,49 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Samuel McL Franks II</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">📝 About Me</a>
+            <a href="portfolio.html">📁 Portfolio</a>
+            <a href="resume.html">📄 Resume</a>
+            <a href="resources.html">🔧 Resources</a>
+            <a href="sports.html">🏀 Sports</a>
+            <a href="bible.html">📖 Bible Verses</a>
+            <a href="social.html">🌐 Social Media</a>
+            <a href="contact.html">✉️ Contact</a>
+        </div>
+        <button id="toggle-dark">Toggle Dark/Light Mode</button>
+    </div>
 
-/* Body */
-body {
-    background-color: #001f3f; /* Dark Navy Blue */
-    color: #f5f5f5;
-    display: flex;
-    min-height: 100vh;
-}
+    <!-- Header -->
+    <header>
+        Samuel McL Franks II
+    </header>
 
-/* Sidebar */
-.sidebar {
-    background-color: #001f3f; /* Dark navy, same as header */
-    width: 200px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 0 10px 10px 0; /* Rounded edges */
-}
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to My Personal Page</h1>
+        <p>
+            [Insert your NBA content here… this is where your main homepage text goes. Talk about favorite teams,
+            players, stats, experiences, etc. This can be as long as needed.]
+        </p>
+        <!-- Add more paragraphs as desired -->
+    </div>
 
-.sidebar-links a {
-    display: block;
-    color: #f5f5f5;
-    text-decoration: none;
-    padding: 15px 20px;
-    margin: 5px 0;
-    border-radius: 8px;
-    transition: background 0.3s;
-}
-
-.sidebar-links a:hover {
-    background-color: #003366;
-}
-
-/* Dark/Light Mode Button */
-#toggle-dark {
-    margin: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #003366;
-    color: #f5f5f5;
-}
-
-/* Header */
-header {
-    background-color: #001f3f;
-    color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Caveat', cursive;
-    font-size: 2em;
-    flex-shrink: 0;
-    width: calc(100% - 200px);
-    margin-left: 200px;
-    border-radius: 0 0 10px 0;
-}
-
-/* Main Content */
-.content {
-    flex: 1;
-    padding: 30px;
-    margin-left: 200px;
-}
-
-/* Light Mode */
-body.light-mode {
-    background-color: #fdf6e3;
-    color: #001f3f;
-}
-
-body.light-mode .sidebar {
-    background-color: #cce0ff;
-}
-
-body.light-mode header {
-    background-color: #cce0ff;
-    color: #001f3f;
-}
-
-body.light-mode .sidebar-links a {
-    color: #001f3f;
-}
-
-body.light-mode #toggle-dark {
-    background-color: #99bbff;
-    color: #001f3f;
-}
+    <!-- Dark/Light Mode Script -->
+    <script>
+        const toggleButton = document.getElementById('toggle-dark');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
+    </script>
+</body>
+</html>
