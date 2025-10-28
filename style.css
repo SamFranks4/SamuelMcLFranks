@@ -1,95 +1,84 @@
-/* General Body */
-body {
+/* Reset default margins/padding */
+* {
   margin: 0;
-  font-family: "Times New Roman", serif;
-  background-color: #f5f0e6; /* soft beige */
-  color: #1e1e1e;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f5f0e6; /* soft beige background */
   display: flex;
 }
 
 /* Header */
 header {
-  background-color: #0a2342; /* navy */
-  color: #f5f0e6;
-  padding: 15px;
-  text-align: center;
-  font-size: 28px;
-  font-family: 'Caveat', cursive;
   width: 100%;
+  height: 70px;
+  background-color: #001f3f; /* navy blue */
+  color: #f5f0e6; /* beige/light text */
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom-left-radius: 20px;
   z-index: 1000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Sidebar */
 .sidebar {
-  width: 150px; /* skinnier sidebar */
-  background-color: #0a2342; /* navy */
-  color: white;
-  height: calc(100vh - 60px);
-  padding-top: 20px;
+  width: 200px; /* skinnier sidebar */
+  background-color: #001f3f; /* navy blue */
   position: fixed;
-  top: 60px; /* below header */
-  border-bottom-right-radius: 20px;
+  top: 70px; /* directly below header */
+  left: 0;
+  height: calc(100vh - 70px); /* stops just under header */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 }
 
-/* Sidebar links */
 .sidebar a {
-  display: block;
-  color: white;
+  color: #f5f0e6; /* light text */
   text-decoration: none;
-  padding: 12px 15px;
-  transition: background-color 0.3s;
+  font-size: 18px;
+  padding: 12px 20px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
 }
 
 .sidebar a:hover {
-  background-color: #163e73;
-}
-
-/* Sidebar icons */
-.sidebar .icon {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-  margin-right: 10px;
+  background-color: #003366; /* slightly lighter navy */
 }
 
 /* Main content */
 .content {
-  margin-left: 170px; /* matches new sidebar width + padding */
-  margin-top: 100px;
+  margin-left: 220px; /* sidebar width + margin */
+  margin-top: 90px; /* header height + margin */
   padding: 20px;
+  background-color: #f5f0e6;
+  border-radius: 10px;
+  min-height: calc(100vh - 90px);
 }
 
-/* Subheaders / page titles */
-h2 {
-  font-family: 'Caveat', cursive;
-  color: #0a2342;
-  font-size: 2em;
-  border-bottom: 2px solid #0a2342;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
+.content h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
 }
 
-/* Paragraph styling */
-p {
-  margin-bottom: 20px;
+.content p {
+  margin-bottom: 12px;
   line-height: 1.6;
-}
-
-/* Verse or text blocks (like Bible Verses page) */
-.verse {
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-.reference {
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-bottom: 5px;
-}
-  font-size: 1.1em;
-  margin-bottom: 5px;
+  font-size: 18px;
 }
