@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel McL Franks II</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,39 +12,46 @@
         <div class="sidebar-links">
             <a href="index.html">🏠 Home</a>
             <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">🖼️ Portfolio</a>
+            <a href="portfolio.html">📁 Portfolio</a>
             <a href="resume.html">📄 Resume</a>
             <a href="resources.html">📚 Resources</a>
             <a href="sports.html">🏀 Sports</a>
             <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
+            <a href="social.html">💬 Social Media</a>
+            <a href="contact.html">📞 Contact</a>
         </div>
-        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
+        <button id="toggle-dark">🌙 Dark/Light</button>
     </div>
 
     <!-- Header -->
     <header>Samuel McL Franks II</header>
 
-    <!-- Main Content -->
-    <div class="content">
-        <h2>Welcome to My Homepage</h2>
-
-        <div class="top-content">
-            <p>
-                Hello! I’m Samuel McL Franks II. Welcome to my personal website where you can learn more about my background, interests, and projects.
-            </p>
-            <img src="myphoto.jpg" alt="Samuel McL Franks II" class="home-image">
-        </div>
-
-        <p>
-            Here, I share my passions for basketball, AI, finance, and personal growth. Feel free to explore the tabs on the left to get a deeper look at my portfolio, resume, and other areas of interest.
-        </p>
+    <!-- Top-right Image -->
+    <!-- ======= Insert your uploaded image here ======= -->
+    <!-- Example: if your image is named 'myphoto.jpg' in the repo root: -->
+    <div class="top-image-container">
+        <img src="IMG_1375 (1).jpeg" alt="Samuel McL Franks" class="top-right-image">
     </div>
 
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Welcome to my personal page</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Praesent a lectus nec nunc interdum tempor. Integer vehicula 
+            sem a orci tincidunt, a scelerisque mauris placerat.
+        </p>
+        <p>
+            More placeholder content about NBA, basketball, personal interests, 
+            or anything else you want on the homepage.
+        </p>
+        <!-- Add more paragraphs here as needed -->
+    </div>
+
+    <!-- Dark/Light Mode Script -->
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
+        const toggle = document.getElementById('toggle-dark');
+        toggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
         });
     </script>
