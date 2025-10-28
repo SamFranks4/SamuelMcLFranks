@@ -9,18 +9,17 @@
 /* Body */
 body {
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
-    background-color: #f5f5dc; /* Beige background */
+    background-color: #f5f5dc; /* Beige */
     color: #001f3f; /* Navy text */
 }
 
 /* Header */
 header {
-    background-color: #001f3f; /* Dark navy */
+    background-color: #001f3f;
     color: #f5f5f5;
-    height: 10vh; /* Slimmer height */
-    width: 100%; /* Full width */
+    height: 10vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,21 +35,40 @@ header {
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 10vh; /* starts right below the header */
+    top: 10vh;
     left: 0;
-    background-color: #001f3f; /* Dark navy */
+    background-color: #001f3f;
     width: 200px;
-    height: 90vh; /* fills remaining height */
+    height: 90vh;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 0 10px 10px 0; /* Rounded right edge */
+    border-radius: 0 10px 10px 0;
+    transition: width 0.3s;
+    overflow: hidden;
 }
 
-/* Sidebar Links */
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.collapse-btn {
+    cursor: pointer;
+    color: #f5f5f5;
+    font-size: 1.5em;
+    padding: 10px 20px;
+}
+
+.sidebar-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .sidebar-links a {
-    display: block;
+    display: flex;
+    align-items: center;
     color: #f5f5f5;
     text-decoration: none;
     padding: 15px 20px;
@@ -61,6 +79,10 @@ header {
 
 .sidebar-links a:hover {
     background-color: #003366;
+}
+
+.sidebar.collapsed .sidebar-links a span {
+    display: none; /* Hide text when collapsed */
 }
 
 /* Dark/Light Mode Button */
@@ -76,21 +98,26 @@ header {
 
 /* Main Content */
 .content {
-    margin-left: 220px; /* Space for sidebar */
-    margin-top: 12vh; /* Space below the header */
+    margin-left: 200px;
+    margin-top: 12vh;
     padding: 30px;
-    background-color: #f5f5dc; /* Beige */
+    background-color: #f5f5dc; /* Beige background */
     color: #001f3f;
+    transition: margin-left 0.3s;
+}
+
+.sidebar.collapsed ~ .content {
+    margin-left: 60px;
 }
 
 /* Light Mode */
 body.light-mode {
-    background-color: #eae6e0; /* lighter beige */
+    background-color: #eae6e0;
     color: #001f3f;
 }
 
 body.light-mode .sidebar {
-    background-color: #cce0ff; /* light blue sidebar */
+    background-color: #cce0ff;
 }
 
 body.light-mode header {
@@ -105,33 +132,4 @@ body.light-mode .sidebar-links a {
 body.light-mode #toggle-dark {
     background-color: #99bbff;
     color: #001f3f;
-}
-
-/* DARK MODE COLORS */
-body.dark-mode {
-  background-color: #000b1a; /* deeper navy body background */
-  color: #f5f5dc; /* beige text */
-}
-
-body.dark-mode .content {
-  background-color: #001f3f; /* navy content box */
-  color: #f5f5dc; /* beige text */
-}
-
-body.dark-mode header {
-  background-color: #00284d; /* slightly lighter navy for contrast */
-  color: #f5f5dc;
-}
-
-body.dark-mode .sidebar {
-  background-color: #00284d; /* slightly lighter navy for sidebar */
-}
-
-body.dark-mode .sidebar-links a {
-  color: #f5f5dc;
-}
-
-body.dark-mode #toggle-dark {
-  background-color: #003366;
-  color: #f5f5dc;
 }
