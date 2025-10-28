@@ -9,7 +9,10 @@
 </head>
 <body>
   <!-- Header -->
-  <header>Samuel McL Franks II</header>
+  <header>
+    Samuel McL Franks II
+    <button id="mode-toggle">🌙</button>
+  </header>
 
   <!-- Main Sidebar -->
   <div class="sidebar">
@@ -32,37 +35,33 @@
       <li>Rebounds per game: 6.7</li>
       <li>Team MVP: 2024</li>
       <li>All-Conference: 2023</li>
-      <!-- Add more stats/achievements as needed -->
     </ul>
   </div>
 
   <!-- Main Content -->
   <div class="content">
     <h2>Welcome</h2>
-    <p>
-      Welcome to my personal page! This is the hub for everything about me. Right now, let's talk NBA. Here’s a lot of text about the NBA, my thoughts, stats, and stories. This section will grow over time as I add more insights and personal commentary about basketball and other interests.
-    </p>
-    <p>
-      [Placeholder for more NBA content… you can expand this with stats, personal stories, or highlights.]
-    </p>
-    <p>
-      The goal of this homepage is to combine professional info with personal interests so anyone visiting can get a well-rounded view of me.
-    </p>
+    <p>Welcome to my personal page! This is the hub for everything about me. Right now, let's talk NBA. Here’s a lot of text about the NBA, my thoughts, stats, and stories.</p>
+    <p>[Placeholder for more NBA content…]</p>
   </div>
 
-  <!-- Toggle Script -->
+  <!-- Scripts -->
   <script>
     const sportsToggle = document.getElementById('sports-toggle');
     const sportsSidebar = document.getElementById('sports-sidebar');
+    const modeToggle = document.getElementById('mode-toggle');
+    const body = document.body;
 
-    sportsSidebar.style.display = 'none'; // hidden by default
-
+    // Sports sidebar toggle
+    sportsSidebar.style.display = 'none';
     sportsToggle.addEventListener('click', () => {
-      if (sportsSidebar.style.display === 'none') {
-        sportsSidebar.style.display = 'block';
-      } else {
-        sportsSidebar.style.display = 'none';
-      }
+      sportsSidebar.style.display = sportsSidebar.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Light/Dark mode toggle
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      modeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
     });
   </script>
 </body>
