@@ -32,14 +32,14 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Sidebar */
+/* Main Sidebar */
 .sidebar {
-  width: 200px; /* skinnier sidebar */
-  background-color: #001f3f; /* navy blue */
+  width: 200px;
+  background-color: #001f3f;
   position: fixed;
-  top: 70px; /* directly below header */
+  top: 70px;
   left: 0;
-  height: calc(100vh - 70px); /* stops just under header */
+  height: calc(100vh - 70px);
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ header {
 }
 
 .sidebar a {
-  color: #f5f0e6; /* light text */
+  color: #f5f0e6;
   text-decoration: none;
   font-size: 18px;
   padding: 12px 20px;
@@ -59,13 +59,43 @@ header {
 }
 
 .sidebar a:hover {
-  background-color: #003366; /* slightly lighter navy */
+  background-color: #003366;
+}
+
+/* Sports Sidebar */
+.sports-sidebar {
+  width: 220px;
+  background-color: #002b5c; /* distinct navy */
+  color: #f5f0e6;
+  padding: 15px;
+  margin-left: 220px; /* next to main sidebar */
+  margin-top: 90px;
+  border-radius: 10px;
+  position: fixed;
+  top: 70px;
+  left: 200px; /* aligns right of main sidebar */
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  display: none; /* hidden by default */
+}
+
+.sports-sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.sports-sidebar ul {
+  list-style-type: none;
+}
+
+.sports-sidebar li {
+  margin-bottom: 10px;
 }
 
 /* Main content */
 .content {
-  margin-left: 220px; /* sidebar width + margin */
-  margin-top: 90px; /* header height + margin */
+  margin-left: 220px;
+  margin-top: 90px;
   padding: 20px;
   background-color: #f5f0e6;
   border-radius: 10px;
