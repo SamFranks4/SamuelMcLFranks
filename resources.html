@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources | Samuel McL Franks II</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* CSS same as above */
-    body { margin:0; font-family:"Times New Roman", serif; background-color:#fdf5e6; display:flex; min-height:100vh; color:#222; overflow-x:hidden;}
-    header {position:fixed; top:0; left:0; width:100%; height:
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Samuel McL Franks II</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="portfolio.html">🖼️ Portfolio</a>
+            <a href="resume.html">📄 Resume</a>
+            <a href="resources.html">📚 Resources</a>
+            <a href="sports.html">🏀 Sports</a>
+            <a href="bible.html">📖 Bible Verses</a>
+            <a href="social.html">📱 Social Media</a>
+            <a href="contact.html">✉️ Contact</a>
+        </div>
+        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
+    </div>
+
+    <!-- Header -->
+    <header>Samuel McL Franks II</header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Resources</h2>
+        <p>Welcome to my resources page. Below are links, tools, and references I frequently use or recommend:</p>
+
+        <!-- Resource placeholders -->
+        <div class="resource-item">
+            <h3>Resource Title 1</h3>
+            <p>Description or purpose of the resource. <a href="#">Link</a></p>
+        </div>
+
+        <div class="resource-item">
+            <h3>Resource Title 2</h3>
+            <p>Description or purpose of the resource. <a href="#">Link</a></p>
+        </div>
+
+        <div class="resource-item">
+            <h3>Resource Title 3</h3>
+            <p>Description or purpose of the resource. <a href="#">Link</a></p>
+        </div>
+
+        <!-- Add more resources as needed -->
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-dark');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
