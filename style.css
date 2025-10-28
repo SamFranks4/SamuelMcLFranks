@@ -80,20 +80,19 @@ header {
     padding: 80px 40px 40px 40px; /* Top padding to avoid header */
 }
 
-/* Top content flex layout */
-.top-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;  /* For smaller screens */
+/* Top-right homepage image */
+.top-image-container {
+    position: absolute;
+    top: 60px; /* Just below the header */
+    right: 0;
+    padding: 10px;
 }
 
-/* Homepage image */
-.home-image {
+.top-right-image {
     max-width: 200px;
     height: auto;
     border-radius: 10px;
-    margin-left: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* Subheaders */
@@ -130,13 +129,15 @@ header {
         padding: 20px;
     }
 
-    .top-content {
-        flex-direction: column;
-        align-items: center;
+    .top-image-container {
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
     }
 
-    .home-image {
-        margin-left: 0;
-        margin-top: 20px;
+    .top-right-image {
+        max-width: 150px;
+        margin-bottom: 20px;
     }
 }
