@@ -1,145 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | Samuel McL Franks II</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* General body */
-    body {
-      margin: 0;
-      font-family: "Times New Roman", serif;
-      background-color: #fdf5e6; /* soft beige */
-      display: flex;
-      min-height: 100vh;
-      color: #222;
-      overflow-x: hidden;
-    }
-
-    /* Header */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      background-color: #001f3f; /* navy blue */
-      color: #ffe5b4; /* warm beige */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Caveat', cursive;
-      font-size: 2.8rem;
-      z-index: 10;
-      border-bottom-right-radius: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background-color: #001f3f; /* navy blue */
-      position: fixed;
-      top: 80px; /* just below header */
-      left: 0;
-      bottom: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 20px;
-      border-top-right-radius: 12px;
-      border-bottom-right-radius: 12px;
-      box-shadow: 2px 0 10px rgba(0,0,0,0.2);
-    }
-
-    .sidebar a {
-      color: white;
-      text-decoration: none;
-      padding: 12px 0;
-      width: 100%;
-      text-align: center;
-      transition: background 0.3s;
-      border-radius: 10px;
-    }
-
-    .sidebar a:hover {
-      background-color: #003366;
-    }
-
-    .sidebar a.active {
-      background-color: #00264d;
-    }
-
-    /* Subheader */
-    .subheader {
-      margin-left: 220px; /* offset for sidebar */
-      margin-top: 100px;  /* offset for header */
-      padding-left: 20px;
-      font-size: 28px;
-      color: #001f3f;
-      font-weight: bold;
-    }
-
-    /* Main content */
-    .main-content {
-      flex: 1;
-      margin-left: 220px;
-      margin-top: 80px;
-      padding: 40px;
-      background-color: #fdf5e6;
-      overflow-y: auto;
-    }
-
-    .main-content section {
-      max-width: 800px;
-      margin: 20px auto;
-      line-height: 1.7;
-    }
-
-    .main-content section p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Samuel McL Franks II</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>Samuel McL Franks II</header>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="portfolio.html">🖼️ Portfolio</a>
+            <a href="resume.html">📄 Resume</a>
+            <a href="resources.html">📚 Resources</a>
+            <a href="sports.html">🏀 Sports</a>
+            <a href="bible.html">📖 Bible Verses</a>
+            <a href="social.html">📱 Social Media</a>
+            <a href="contact.html">✉️ Contact</a>
+        </div>
+        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
+    </div>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html" class="active">👤 About Me</a>
-    <a href="#">📱 Social Media</a>
-    <a href="#">✉️ Contact</a>
-    <a href="#">✨ Miscellaneous</a>
-  </div>
+    <!-- Header -->
+    <header>Samuel McL Franks II</header>
 
-  <!-- Main content -->
-  <div class="main-content">
-    <div class="subheader">About Me</div>
+    <!-- Main Content -->
+    <div class="content">
+        <h2>About Me</h2>
+        <p>
+            I am from Aberdeen, SD, and have lived there my entire life. Currently, I am attending Trinity Bible College & Graduate School, hoping to attain my Master's in Business Administration.
+        </p>
+        <p>
+            One of my biggest skills that will translate to the workforce today is my proficiency with Artificial Intelligence. In my free time, I enjoy playing basketball and soccer. I’m on both teams here, and training is a big part of my routine.
+        </p>
+        <p>
+            Long-term goals include fully understanding the stock market and trading. Fun facts about me: I have two brothers, a half-sister, and a dog named Leo. Someone I find very inspiring is Stephen Curry, particularly how openly he shares his Christian faith.
+        </p>
+        <p>
+            I am a devoted Christian and regularly attend Bethlehem Lutheran. My faith guides me in both personal and professional aspects of life.
+        </p>
+        <p>
+            Basketball has taught me discipline, teamwork, and perseverance. Soccer complements my athletic training and provides balance to my routine.
+        </p>
+        <p>
+            In academics, I focus on both theory and practical applications of business and technology. Using AI effectively is a core strength I hope to leverage in future career opportunities.
+        </p>
+        <p>
+            I enjoy reading and reflecting on scripture. My favorite verses guide my values and daily decisions, shaping both my personal and professional character.
+        </p>
+        <p>
+            Community involvement and mentorship are important to me. I aim to inspire others through leadership, collaboration, and integrity.
+        </p>
+        <p>
+            I am continually exploring new ways to learn and grow, whether through sports, studies, or creative projects. Each experience builds toward my long-term vision.
+        </p>
+        <p>
+            Overall, I strive to combine faith, education, and personal passions to contribute positively to the world around me.
+        </p>
+    </div>
 
-    <section>
-      <p>I was born and raised in Aberdeen, South Dakota, where I have spent my entire life. My hometown has shaped much of who I am today, instilling values of community, perseverance, and faith.</p>
-
-      <p>Currently, I am pursuing my higher education at Trinity Bible College & Graduate School, working toward a Master's in Business Administration. This journey allows me to combine my passion for learning with practical skills that prepare me for the workforce.</p>
-
-      <p>One of my strongest skills is proficiency with Artificial Intelligence, a field I have studied and applied extensively. I am particularly interested in how AI can enhance decision-making, streamline processes, and transform the way businesses operate.</p>
-
-      <p>Outside of academics, I am actively involved in sports. I play both basketball and soccer, dedicating time to training and team activities. These experiences not only keep me physically active but also teach discipline, teamwork, and leadership.</p>
-
-      <p>My long-term goals include gaining a deep understanding of the stock market and trading. I am fascinated by the mechanics of investing and the challenge of making informed, strategic financial decisions.</p>
-
-      <p>On a more personal note, my family is a central part of my life. I have two brothers, a half-sister, and a dog named Leo. Spending time with them reminds me of the importance of balance, laughter, and loyalty.</p>
-
-      <p>I draw inspiration from figures like Stephen Curry, whose openness about his Christian faith demonstrates courage and authenticity. His example encourages me to integrate my beliefs into all aspects of my life.</p>
-
-      <p>Speaking of faith, I am a devoted Christian and an active member of Bethlehem Lutheran Church. My spiritual life grounds me, giving perspective, purpose, and a strong moral compass.</p>
-
-      <p>I strive to approach life with integrity, compassion, and a willingness to learn. These principles guide both my personal and professional endeavors, helping me build meaningful relationships and make thoughtful decisions.</p>
-
-      <p>Ultimately, I hope this page offers a glimpse into who I am—someone driven, curious, and committed to growth. Whether through academics, sports, or faith, I aim to make a positive impact and leave a lasting impression on those around me.</p>
-    </section>
-  </div>
+    <script>
+        const toggleButton = document.getElementById('toggle-dark');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
