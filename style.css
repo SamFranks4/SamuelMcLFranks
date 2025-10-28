@@ -13,10 +13,10 @@ body {
   display: flex;
 }
 
-/* Dark Mode */
+/* Dark Mode - Softer Colors */
 body.dark-mode {
-  background-color: #0b0f2c; /* dark blue */
-  color: #f5f0e6;
+  background-color: #1a2238; /* softer dark blue */
+  color: #e0e0e0; /* light gray text */
 }
 
 /* Header */
@@ -87,8 +87,8 @@ header {
 /* Sports Sidebar */
 .sports-sidebar {
   width: 220px;
-  background-color: #002b5c;
-  color: #f5f0e6;
+  background-color: #1e2a44; /* softer navy */
+  color: #e0e0e0;
   padding: 15px;
   margin-left: 220px;
   margin-top: 90px;
@@ -137,22 +137,22 @@ header {
 
 /* Dark Mode Overrides */
 body.dark-mode header {
-  background-color: #001f3f;
+  background-color: #1b2a4b; /* slightly lighter header */
 }
 
 body.dark-mode .sidebar {
-  background-color: #001f3f;
+  background-color: #1e2a44; /* softer dark navy */
 }
 
 body.dark-mode .sidebar a:hover {
-  background-color: #003366;
+  background-color: #2b3a5c; /* softer hover effect */
 }
 
 body.dark-mode .sports-sidebar {
-  background-color: #002b5c;
+  background-color: #253153; /* slightly lighter than sidebar */
 }
 
 body.dark-mode .content {
-  background-color: #0b0f2c;
-  color: #f5f0e6;
+  background-color: #1a2238;
+  color: #e0e0e0;
 }
