@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Samuel McL Franks II</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="portfolio.html">🖼️ Portfolio</a>
+            <a href="resume.html">📄 Resume</a>
+            <a href="resources.html">📚 Resources</a>
+            <a href="sports.html">🏀 Sports</a>
+            <a href="bible.html">📖 Bible Verses</a>
+            <a href="social.html">📱 Social Media</a>
+            <a href="contact.html">✉️ Contact</a>
+        </div>
+        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
+    </div>
+
+    <!-- Header -->
+    <header>Samuel McL Franks II</header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Portfolio</h2>
+        <p>Welcome to my portfolio. Here are some of the projects and works I’ve been involved in:</p>
+
+        <!-- Portfolio items placeholders -->
+        <div class="portfolio-item">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project, technologies used, and your role.</p>
+        </div>
+
+        <div class="portfolio-item">
+            <h3>Project Title 2</h3>
+            <p>Short description of the project, technologies used, and your role.</p>
+        </div>
+
+        <div class="portfolio-item">
+            <h3>Project Title 3</h3>
+            <p>Short description of the project, technologies used, and your role.</p>
+        </div>
+
+        <!-- Add more projects as needed -->
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-dark');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
