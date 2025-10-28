@@ -20,7 +20,7 @@ header {
     left: 200px; /* Width of sidebar */
     right: 0;
     height: 60px;
-    background-color: #0b3d91; /* Navy Blue */
+    background-color: #0b3d91; /* NAVY BLUE */
     color: #f5f0e1;  /* Light text */
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@ header {
     left: 0;
     width: 200px;
     height: 100%;
-    background-color: #0b3d91;  /* Navy Blue */
+    background-color: #0b3d91;  /* NAVY BLUE */
     padding-top: 60px;  /* Align below header */
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ header {
 .content h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #0b3d91;
+    color: #0b3d91; /* NAVY BLUE */
 }
 
 /* Paragraph spacing */
