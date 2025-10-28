@@ -109,7 +109,7 @@ body.light-mode #toggle-dark {
 
 /* DARK MODE COLORS */
 body.dark-mode {
-  background-color: #000b1a; /* darker navy blue background */
+  background-color: #000b1a; /* deeper navy body background */
   color: #f5f5dc; /* beige text */
 }
 
@@ -119,12 +119,12 @@ body.dark-mode .content {
 }
 
 body.dark-mode header {
-  background-color: #001a33; /* darker navy header */
+  background-color: #00284d; /* slightly lighter navy for contrast */
   color: #f5f5dc;
 }
 
 body.dark-mode .sidebar {
-  background-color: #001a33; /* keep sidebar dark navy */
+  background-color: #00284d; /* slightly lighter navy for sidebar */
 }
 
 body.dark-mode .sidebar-links a {
