@@ -48,6 +48,14 @@ header {
   background-color: #163e73;
 }
 
+/* Sidebar icons */
+.sidebar .icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
 /* Main content */
 .content {
   margin-left: 170px; /* matches new sidebar width + padding */
@@ -65,6 +73,12 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Paragraph styling */
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
 /* Verse or text blocks (like Bible Verses page) */
 .verse {
   margin-bottom: 30px;
@@ -73,6 +87,9 @@ h2 {
 
 .reference {
   font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
   font-size: 1.1em;
   margin-bottom: 5px;
 }
