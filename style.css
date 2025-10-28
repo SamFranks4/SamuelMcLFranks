@@ -27,7 +27,7 @@ header {
     font-family: 'Caveat', cursive;
     font-size: 2em;
     border-radius: 0 0 10px 0;
-    border: 2px solid #f5f5dc;
+    border: 2px solid #f5f5dc; /* Beige outline */
     position: fixed;
     top: 0;
     left: 0;
@@ -47,7 +47,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0 10px 10px 0;
-    border: 2px solid #f5f5dc;
+    border: 2px solid #f5f5dc; /* Beige outline */
     transition: width 0.3s;
 }
 
@@ -121,6 +121,7 @@ body.light-mode header,
 body.light-mode .sidebar {
     background-color: #001f3f; /* Keep dark navy */
     color: #f5f5dc;
+    border: 2px solid #f5f5dc; /* Beige outline */
 }
 
 body.light-mode #toggle-dark {
