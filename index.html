@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samuel McL Franks II - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel McL Franks II</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    Samuel McL Franks II
-  </header>
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About Me</a>
-    <a href="portfolio.html">💼 Portfolio</a>
-    <a href="resume.html">📄 Resume</a>
-    <a href="resources.html">🛠️ Resources</a>
-    <a href="bible.html">📖 Bible Verses</a>
-    <a href="contact.html">✉️ Contact</a>
-    <a href="#" id="sports-toggle">🏀 Sports</a>
-
-    <!-- Light/Dark Mode Toggle at bottom -->
-    <div style="margin-top:auto; padding: 20px;">
-      <button id="mode-toggle">🌙</button>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👤 About Me</a>
+        <a href="portfolio.html">🖼️ Portfolio</a>
+        <a href="resume.html">📄 Resume</a>
+        <a href="resources.html">📚 Resources</a>
+        <a href="sports.html">🏀 Sports</a>
+        <a href="bible.html">📖 Bible Verses</a>
+        <button id="toggle-dark">🌙 Light/Dark</button>
     </div>
-  </div>
 
-  <!-- Sports Sidebar -->
-  <div class="sports-sidebar" id="sports-sidebar">
-    <h3>Basketball Stats & Accolades 🏀</h3>
-    <ul>
-      <li>Points per game: 18.4</li>
-      <li>Assists per game: 5.2</li>
-      <li>Rebounds per game: 6.7</li>
-      <li>Team MVP: 2024</li>
-      <li>All-Conference: 2023</li>
-    </ul>
-  </div>
+    <!-- Header -->
+    <header>Samuel McL Franks II</header>
 
-  <!-- Main Content -->
-  <div class="content">
-    <h2>Welcome</h2>
-    <p>Welcome to my personal page! This is the hub for everything about me. Right now, let's talk NBA. Here’s a lot of text about the NBA, my thoughts, stats, and stories.</p>
-    <p>[Placeholder for more NBA content…]</p>
-  </div>
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Welcome to My NBA Thoughts</h2>
+        <p>
+            The NBA is one of the most exciting professional sports leagues in the world. It showcases elite athleticism, teamwork, and strategy. Players like Stephen Curry revolutionize the game with their shooting, while the rise of young talents keeps fans on the edge of their seats. 
+        </p>
+        <p>
+            Basketball requires not only physical skill but mental toughness. Every game presents opportunities to learn, adapt, and improve. Coaches emphasize fundamentals, teamwork, and decision-making, which translate to life skills beyond the court.
+        </p>
+        <p>
+            Watching games, analyzing plays, and keeping up with stats are some of my favorite ways to engage with the sport. From offensive sets to defensive strategies, every detail contributes to the excitement.
+        </p>
+        <p>
+            Off the court, the NBA has a significant impact on culture, fashion, and community initiatives. Players use their platforms to inspire, educate, and give back, which makes the league more than just a game.
+        </p>
+        <p>
+            Each season brings surprises, rivalries, and memorable moments that fans cherish. Whether it’s buzzer-beaters, epic comebacks, or record-breaking performances, the NBA continues to capture attention worldwide.
+        </p>
+        <p>
+            Analyzing player stats and team dynamics provides insight into what makes a successful team. Chemistry, leadership, and consistency are key components of championship-level play.
+        </p>
+        <p>
+            Training, preparation, and focus are integral to an athlete's success. Watching how professional players manage their routines is inspiring and provides lessons for personal growth.
+        </p>
+        <p>
+            The blend of entertainment, athleticism, and strategy makes basketball a sport that appeals to millions. Following trends, understanding strategies, and appreciating skill keeps me deeply engaged.
+        </p>
+        <p>
+            Fan communities, podcasts, and social media discussions enrich the experience, offering multiple perspectives and analyses. Engaging with other fans creates connections and deepens understanding.
+        </p>
+        <p>
+            Ultimately, the NBA reflects dedication, discipline, and passion. Every game is a reminder of what commitment and teamwork can achieve, both on and off the court.
+        </p>
+    </div>
 
-  <!-- Scripts -->
-  <script>
-    const sportsToggle = document.getElementById('sports-toggle');
-    const sportsSidebar = document.getElementById('sports-sidebar');
-    const modeToggle = document.getElementById('mode-toggle');
-    const body = document.body;
+    <!-- Optional Sports Sidebar (hidden by default) -->
+    <div class="sports-sidebar" id="sports-sidebar">
+        <h3>Basketball Stats & Accolades</h3>
+        <ul>
+            <li>Points per game: 20</li>
+            <li>Assists per game: 5</li>
+            <li>Rebounds per game: 7</li>
+            <li>Team Captain: Yes</li>
+            <li>All-Conference Selection</li>
+        </ul>
+    </div>
 
-    // Sports sidebar toggle
-    sportsSidebar.style.display = 'none';
-    sportsToggle.addEventListener('click', () => {
-      sportsSidebar.style.display = sportsSidebar.style.display === 'none' ? 'block' : 'none';
-    });
-
-    // Light/Dark mode toggle
-    modeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      modeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-  </script>
+    <script>
+        const toggleButton = document.getElementById('toggle-dark');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
