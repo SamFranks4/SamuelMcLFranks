@@ -12,31 +12,36 @@
     </header>
 
     <div class="sidebar" id="sidebar">
-        <div class="collapse-btn" id="collapse-btn">☰</div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div class="sidebar-links">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">💼 Portfolio</a>
-            <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">📚 Resources</a>
-            <a href="sports.html">🏀 Sports</a>
-            <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
+            <a href="index.html">🏠 Home <span>Home</span></a>
+            <a href="about.html">👤 About Me <span>About Me</span></a>
+            <a href="portfolio.html">💼 Portfolio <span>Portfolio</span></a>
+            <a href="resume.html">📄 Resume <span>Resume</span></a>
+            <a href="resources.html">📚 Resources <span>Resources</span></a>
+            <a href="sports.html">🏀 Sports <span>Sports</span></a>
+            <a href="bible.html">📖 Bible Verses <span>Bible Verses</span></a>
+            <a href="social.html">📱 Social Media <span>Social Media</span></a>
+            <a href="contact.html">✉️ Contact <span>Contact</span></a>
         </div>
         <button id="toggle-dark">🌓 Dark/Light</button>
     </div>
 
     <div class="content">
         <h2>Welcome to my personal page!</h2>
-        <p>Here’s where your main content goes.</p>
+        <p>This is the main reading area. When the sidebar is collapsed, you have more horizontal space for text and content.</p>
     </div>
 
     <script>
-        const collapseBtn = document.getElementById('collapse-btn');
+        const hamburger = document.getElementById('hamburger');
         const sidebar = document.getElementById('sidebar');
-        collapseBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('collapsed');
+
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('expanded');
         });
 
         const toggleDark = document.getElementById('toggle-dark');
