@@ -1,61 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samuel McL Franks II</title>
-<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samuel McL Franks II</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Small page-specific tweaks so the cards layout looks right without touching global CSS */
+    .content .intro {
+      max-width: 900px;
+      margin-bottom: 20px;
+    }
+    .home-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 12px;
+    }
+    .home-card {
+      background-color: rgba(0,0,0,0.03);
+      padding: 18px;
+      border-radius: 10px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .home-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    .home-card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: inherit;
+      margin-bottom: 12px;
+    }
+    .home-card a.cta {
+      align-self: flex-start;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      background-color: #001f3f;
+      color: #f5f5dc;
+      transition: background 0.18s, transform 0.18s;
+    }
+    .home-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+    .home-card a.cta:hover {
+      background-color: #003366;
+      transform: translateY(-1px);
+    }
+
+    /* make sure cards work in dark mode as well */
+    body:not(.light-mode) .home-card {
+      background-color: rgba(255,255,255,0.03);
+    }
+    body.light-mode .home-card {
+      background-color: rgba(0,0,0,0.03);
+    }
+
+    /* responsive small tweak so content slides smoothly with collapsed sidebar */
+    .content.shrunk { margin-left: 80px !important; }
+  </style>
 </head>
 <body>
+  <!-- Header (unchanged) -->
+  <header>Samuel McL Franks II</header>
 
-<header>Samuel McL Franks II</header>
+  <!-- Sidebar (unchanged structure) -->
+  <div class="sidebar" id="sidebar">
+    <div class="hamburger" id="hamburger" role="button" aria-label="Toggle sidebar">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
-<div class="sidebar">
-  <div class="hamburger" id="hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="sidebar-links">
+      <a href="index.html">🏠 <span class="title">Home</span></a>
+      <a href="about.html">👤 <span class="title">About Me</span></a>
+      <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
+      <a href="resume.html">📄 <span class="title">Resume</span></a>
+      <a href="resources.html">📚 <span class="title">Resources</span></a>
+      <a href="sports.html">🏀 <span class="title">Sports</span></a>
+      <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
+      <a href="social.html">🌐 <span class="title">Social Media</span></a>
+      <a href="contact.html">✉️ <span class="title">Contact</span></a>
+    </div>
+
+    <button id="toggle-dark" title="Toggle light / dark">🌙</button>
   </div>
-  <div class="sidebar-links">
-    <a href="index.html"><span class="emoji">🏠</span><span class="title">Home</span></a>
-    <a href="about.html"><span class="emoji">👤</span><span class="title">About Me</span></a>
-    <a href="portfolio.html"><span class="emoji">💼</span><span class="title">Portfolio</span></a>
-    <a href="resume.html"><span class="emoji">📄</span><span class="title">Resume</span></a>
-    <a href="resources.html"><span class="emoji">📚</span><span class="title">Resources</span></a>
-    <a href="sports.html"><span class="emoji">🏀</span><span class="title">Sports</span></a>
-    <a href="bible.html"><span class="emoji">📖</span><span class="title">Bible Verses</span></a>
-    <a href="social.html"><span class="emoji">🌐</span><span class="title">Social Media</span></a>
-    <a href="contact.html"><span class="emoji">✉️</span><span class="title">Contact</span></a>
-  </div>
-  <button id="toggle-dark">🌙</button>
-</div>
 
-<div class="content">
-  <h2>Welcome</h2>
-  <p>Start adding your homepage content here...</p>
-</div>
+  <!-- Main content (REPLACED with portfolio-card grid preview) -->
+  <main class="content" id="mainContent">
+    <div class="intro">
+      <h1 style="margin-bottom:6px;">Portfolio Preview</h1>
+      <p style="margin:0 0 6px 0;">A visual index of pages and projects — quick, scannable previews that point visitors to the deeper content. Click any card to dive in.</p>
+      <p style="margin:0; color: #555; font-size:0.95rem;">This home layout is meant to be an at-a-glance hub: show your range (sports, work, faith, contact) without repeating the About Me story.</p>
+    </div>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const sidebar = document.querySelector('.sidebar');
-  const body = document.body;
-  const toggleButton = document.getElementById('toggle-dark');
+    <div class="home-grid">
+      <div class="home-card">
+        <div>
+          <h3>About Me</h3>
+          <p>My background, studies at Trinity, values, and the story that shaped my path.</p>
+        </div>
+        <a class="cta" href="about.html">Read About Me</a>
+      </div>
 
-  // Collapse sidebar
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('shrunk');
-    document.querySelectorAll('.sidebar-links .title').forEach(el => {
-      el.style.display = sidebar.classList.contains('shrunk') ? 'none' : 'inline';
-    });
-    document.querySelector('.content').style.marginLeft = sidebar.classList.contains('shrunk') ? '60px' : '220px';
-  });
+      <div class="home-card">
+        <div>
+          <h3>Portfolio</h3>
+          <p>Short descriptions of projects, essays, and creative work — including web, writing, and visual pieces.</p>
+        </div>
+        <a class="cta" href="portfolio.html">Open Portfolio</a>
+      </div>
 
-  // Dark/Light toggle
-  toggleButton.addEventListener('click', () => {
-    body.classList.toggle('light-mode');
-  });
-</script>
+      <div class="home-card">
+        <div>
+          <h3>Resume</h3>
+          <p>Professional summary, education, and skills you can scan or download if needed.</p>
+        </div>
+        <a class="cta" href="resume.html">View Resume</a>
+      </div>
 
+      <div class="home-card">
+        <div>
+          <h3>Sports</h3>
+          <p>Stats, the transfer story, and what competition taught me — basketball is central to who I am.</p>
+        </div>
+        <a class="cta" href="sports.html">See Sports</a>
+      </div>
+
+      <div class="home-card">
+        <div>
+          <h3>Bible Verses</h3>
+          <p>A reading page for favorite passages and short reflections — faith is the lens I build through.</p>
+        </div>
+        <a class="cta" href="bible.html">Read Verses</a>
+      </div>
+
+      <div class="home-card">
+        <div>
+          <h3>Social Media</h3>
+          <p>Where to follow: short content, photos, and quick updates. Links to Instagram, TikTok, X, Snapchat.</p>
+        </div>
+        <a class="cta" href="social.html">Connect</a>
+      </div>
+
+      <div class="home-card">
+        <div>
+          <h3>Resources</h3>
+          <p>Tools and reading lists that shaped my study, code, and faith — a small library of recommendations.</p>
+        </div>
+        <a class="cta" href="resources.html">Explore Resources</a>
+      </div>
+
+      <div class="home-card">
+        <div>
+          <h3>Contact</h3>
+          <p>Email, phone, and simple ways to reach out for work, questions, or collaborations.</p>
+        </div>
+        <a class="cta" href="contact.html">Contact Me</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- JS: keep behavior consistent with your other pages -->
+  <script>
+    (function() {
+      const sidebar = document.querySelector('.sidebar');
+      const hamburger = document.getElementById('hamburger');
+      const toggleDark = document.getElementById('toggle-dark');
+      const content = document.getElementById('mainContent');
+
+      function setTitlesHidden(hidden) {
+        document.querySelectorAll('.sidebar-links .title').forEach(el => {
+          el.style.display = hidden ? 'none' : 'inline';
+        });
+      }
+
+      hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('shrunk');
+        content.classList.toggle('shrunk');
+        setTitlesHidden(sidebar.classList.contains('shrunk'));
+      });
+
+      toggleDark.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+      });
+
+      // ensure initial state of titles matches any pre-existing shrunk class
+      setTitlesHidden(sidebar.classList.contains('shrunk'));
+    })();
+  </script>
 </body>
 </html>
