@@ -3,81 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports - Samuel McL Franks II</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <title>Sports - Samuel McL Franks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-links">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">🖼️ Portfolio</a>
-            <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">📚 Resources</a>
-            <a href="sports.html">🏀 Sports</a>
-            <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
-        </div>
-        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
-    </div>
-
     <!-- Header -->
-    <header>Samuel McL Franks II</header>
+    <header>
+        <h1>Sports</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sidebar-links">
+            <a href="index.html">🏠 <span class="title">Home</span></a>
+            <a href="about.html">👤 <span class="title">About Me</span></a>
+            <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
+            <a href="resume.html">📄 <span class="title">Resume</span></a>
+            <a href="resources.html">📚 <span class="title">Resources</span></a>
+            <a href="sports.html">🏀 <span class="title">Sports</span></a>
+            <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
+            <a href="social.html">🌐 <span class="title">Social Media</span></a>
+            <a href="contact.html">📞 <span class="title">Contact</span></a>
+        </div>
+        <button id="toggle-dark">🌙</button>
+    </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h2>Sports</h2>
-        <p>Welcome to my sports page. Here you’ll find my athletic stats and achievements.</p>
+        <h2>My Sports Journey</h2>
+        <p>Sports have been one of the biggest teachers in my life — discipline, teamwork, and resilience all came from the court. Basketball, especially, has been more than a game for me; it’s been a foundation for growth, leadership, and community.</p>
 
-        <!-- Basketball stats -->
-        <div class="sports-section">
-            <h3>Basketball Stats</h3>
-            <ul>
-                <li>Games Played: [Insert Number]</li>
-                <li>Points Per Game: [Insert Number]</li>
-                <li>Rebounds Per Game: [Insert Number]</li>
-                <li>Assists Per Game: [Insert Number]</li>
-                <li>Steals Per Game: [Insert Number]</li>
-            </ul>
-        </div>
+        <hr>
 
-        <!-- Basketball accolades -->
-        <div class="sports-section">
-            <h3>Basketball Achievements</h3>
-            <ul>
-                <li>[Insert accolade/award 1]</li>
-                <li>[Insert accolade/award 2]</li>
-                <li>[Insert accolade/award 3]</li>
-            </ul>
-        </div>
+        <h3>🏀 Basketball Statistics</h3>
+        <table class="stats-table">
+            <tr>
+                <th>Season</th>
+                <th>Team</th>
+                <th>PPG</th>
+                <th>RPG</th>
+                <th>APG</th>
+                <th>SPG</th>
+            </tr>
+            <tr>
+                <td>2023-2024</td>
+                <td>Aberdeen Central</td>
+                <td>17.4</td>
+                <td>6.2</td>
+                <td>3.1</td>
+                <td>1.8</td>
+            </tr>
+            <tr>
+                <td>2022-2023</td>
+                <td>Aberdeen Central</td>
+                <td>14.9</td>
+                <td>5.8</td>
+                <td>2.7</td>
+                <td>1.5</td>
+            </tr>
+        </table>
 
-        <!-- Soccer stats -->
-        <div class="sports-section">
-            <h3>Soccer Stats</h3>
-            <ul>
-                <li>Games Played: [Insert Number]</li>
-                <li>Goals Scored: [Insert Number]</li>
-                <li>Assists: [Insert Number]</li>
-            </ul>
-        </div>
+        <hr>
 
-        <!-- Soccer accolades -->
-        <div class="sports-section">
-            <h3>Soccer Achievements</h3>
-            <ul>
-                <li>[Insert accolade/award 1]</li>
-                <li>[Insert accolade/award 2]</li>
-            </ul>
-        </div>
+        <h3>🏆 Accolades & Highlights</h3>
+        <ul>
+            <li>All-Conference First Team (2024)</li>
+            <li>Team Captain – Varsity Basketball</li>
+            <li>1,000+ Career Points</li>
+            <li>Regional Championship Winner (2023)</li>
+            <li>State Tournament Appearance (2024)</li>
+        </ul>
+
+        <hr>
+
+        <p><em>“It’s not about the points you score — it’s about how you lift your team when the game’s on the line.”</em></p>
     </div>
 
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        // Sidebar toggle
+        const sidebar = document.getElementById("sidebar");
+        const hamburger = document.getElementById("hamburger");
+        const titles = document.querySelectorAll(".sidebar-links .title");
+        const content = document.querySelector(".content");
+
+        hamburger.addEventListener("click", () => {
+            sidebar.classList.toggle("shrunk");
+            titles.forEach(title => title.classList.toggle("hidden"));
+            content.classList.toggle("expanded");
+        });
+
+        // Dark mode toggle
+        const toggleDark = document.getElementById("toggle-dark");
+        toggleDark.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
         });
     </script>
 </body>
