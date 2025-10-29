@@ -3,47 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media - Samuel McL Franks II</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <title>Social Media - Samuel McL Franks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-links">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">🖼️ Portfolio</a>
-            <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">📚 Resources</a>
-            <a href="sports.html">🏀 Sports</a>
-            <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
-        </div>
-        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
-    </div>
-
     <!-- Header -->
-    <header>Samuel McL Franks II</header>
+    <header>
+        <h1>Social Media</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sidebar-links">
+            <a href="index.html">🏠 <span class="title">Home</span></a>
+            <a href="about.html">👤 <span class="title">About Me</span></a>
+            <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
+            <a href="resume.html">📄 <span class="title">Resume</span></a>
+            <a href="resources.html">📚 <span class="title">Resources</span></a>
+            <a href="sports.html">🏀 <span class="title">Sports</span></a>
+            <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
+            <a href="social.html">🌐 <span class="title">Social Media</span></a>
+            <a href="contact.html">📞 <span class="title">Contact</span></a>
+        </div>
+        <button id="toggle-dark">🌙</button>
+    </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h2>Social Media</h2>
-        <p>Here are my social media accounts:</p>
-        <ul>
-            <li><strong>Instagram:</strong> <a href="#" target="_blank">@yourInstagram</a></li>
-            <li><strong>Twitter:</strong> <a href="#" target="_blank">@yourTwitter</a></li>
-            <li><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourprofile</a></li>
-            <li><strong>Facebook:</strong> <a href="#" target="_blank">facebook.com/yourprofile</a></li>
-            <li><strong>Other:</strong> <a href="#" target="_blank">Your other link</a></li>
-        </ul>
+        <h2>Connect With Me</h2>
+        <p>These are the platforms where I share ideas, updates, and projects. Feel free to reach out, follow, or just scroll through the journey.</p>
+
+        <div class="social-links">
+            <div class="social-card">
+                <h3>Instagram 📸</h3>
+                <p>Life in motion — stories, highlights, and the in-between moments.</p>
+                <a href="#" target="_blank">Visit Instagram</a>
+            </div>
+
+            <div class="social-card">
+                <h3>LinkedIn 💼</h3>
+                <p>Professional side of the story. Projects, connections, and progress.</p>
+                <a href="#" target="_blank">Visit LinkedIn</a>
+            </div>
+
+            <div class="social-card">
+                <h3>Twitter / X 🗣️</h3>
+                <p>Quick thoughts, current takes, and tech talk.</p>
+                <a href="#" target="_blank">Visit Twitter / X</a>
+            </div>
+
+            <div class="social-card">
+                <h3>GitHub 💻</h3>
+                <p>Code, experiments, and ongoing builds.</p>
+                <a href="#" target="_blank">Visit GitHub</a>
+            </div>
+        </div>
     </div>
 
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        // Sidebar toggle
+        const sidebar = document.getElementById("sidebar");
+        const hamburger = document.getElementById("hamburger");
+        const titles = document.querySelectorAll(".sidebar-links .title");
+        const content = document.querySelector(".content");
+
+        hamburger.addEventListener("click", () => {
+            sidebar.classList.toggle("shrunk");
+            titles.forEach(title => title.classList.toggle("hidden"));
+            content.classList.toggle("expanded");
+        });
+
+        // Dark mode toggle
+        const toggleDark = document.getElementById("toggle-dark");
+        toggleDark.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
         });
     </script>
 </body>
