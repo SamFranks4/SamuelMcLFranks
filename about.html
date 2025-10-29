@@ -3,57 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <!-- Global CSS -->
+    <title>About Me - Samuel McL Franks</title>
     <link rel="stylesheet" href="style.css">
-    <!-- About Me specific styles -->
-    <style>
-        body {
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            font-size: 12pt;
-            line-height: 1.5;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
-    <header>Samuel McL Franks II</header>
+    <header>
+        <h1>About Me</h1>
+    </header>
 
     <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-links">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">💼 Portfolio</a>
-            <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">📚 Resources</a>
-            <a href="sports.html">🏀 Sports</a>
-            <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
+    <div class="sidebar" id="sidebar">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <button id="toggle-dark">Toggle Dark/Light Mode</button>
+        <div class="sidebar-links">
+            <a href="index.html">🏠 <span class="title">Home</span></a>
+            <a href="about.html">👤 <span class="title">About Me</span></a>
+            <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
+            <a href="resume.html">📄 <span class="title">Resume</span></a>
+            <a href="resources.html">📚 <span class="title">Resources</span></a>
+            <a href="sports.html">🏀 <span class="title">Sports</span></a>
+            <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
+            <a href="social.html">🌐 <span class="title">Social Media</span></a>
+            <a href="contact.html">📞 <span class="title">Contact</span></a>
+        </div>
+        <button id="toggle-dark">🌙</button>
     </div>
 
-    <!-- Main content -->
+    <!-- Main Content -->
     <div class="content">
-        <h1>About Me</h1>
-        <p>I am from Aberdeen, SD, and I have lived here my entire life. My community and upbringing have shaped the person I am today, instilling in me a sense of responsibility and dedication.</p>
-        <p>Currently, I am attending Trinity Bible College & Graduate School, pursuing my Master's in Business Administration. My education is focused on equipping me with the skills necessary to thrive in both the professional and personal aspects of life.</p>
-        <p>One of my key strengths is my proficiency with Artificial Intelligence, which I have developed through both academic studies and personal exploration. I enjoy applying AI concepts in practical situations, which I believe is a highly valuable skill in today’s workforce.</p>
-        <p>In my free time, I am actively involved in sports. I play basketball and soccer for my college teams, dedicating myself to training and teamwork. These activities help me maintain discipline, resilience, and a strong work ethic.</p>
-        <p>My long-term goals include gaining a deep understanding of the stock market and trading strategies. I am passionate about investing and continuously educate myself to make informed financial decisions.</p>
-        <p>On a personal level, I come from a family with two brothers, a half-sister, and a dog named Leo. Family life and relationships are very important to me, shaping my values and guiding my daily decisions.</p>
-        <p>I find inspiration in individuals who combine talent with integrity. Stephen Curry, for example, impresses me with his transparency and devotion to his Christian faith, which motivates me to integrate my faith with my ambitions.</p>
-        <p>My faith is central to my life. I am a devoted Christian and regularly attend Bethlehem Lutheran Church. My faith informs my values, decisions, and interactions with others, providing guidance and purpose.</p>
-        <p>In all aspects of life, I strive for balance — combining education, sports, faith, family, and personal growth. Each area complements the other, helping me become a well-rounded individual.</p>
-        <p>Overall, I am committed to lifelong learning, personal development, and meaningful engagement with my community. I aim to live a life that reflects my principles and ambitions while remaining grounded in faith and family.</p>
+        <p>I was born and raised in Aberdeen, South Dakota, and have lived there my entire life. Growing up in a close-knit community has helped me appreciate the value of consistency, character, and faith.</p>
+
+        <p>Currently, I attend Trinity Bible College & Graduate School, where I’m pursuing my Master’s in Business Administration. The program has challenged me to think critically about leadership, stewardship, and the balance between innovation and ethics.</p>
+
+        <p>One of my greatest strengths in today’s workforce is my proficiency with Artificial Intelligence. I’ve learned how to integrate AI tools into projects, streamlining tasks and increasing efficiency without losing the human touch that makes good work meaningful.</p>
+
+        <p>Outside of academics, basketball plays a huge role in my life. I train regularly as a member of the college basketball team and also compete on the soccer team. Sports have taught me the importance of discipline, teamwork, and resilience.</p>
+
+        <p>Beyond the court, I have a growing passion for understanding the stock market. My long-term goal is to become fluent in trading and investment strategies, not just for personal growth but to help others build financial literacy and independence.</p>
+
+        <p>Family means a lot to me — I have two brothers, a half-sister, and a dog named Leo who has more energy than anyone else in the house. They keep me grounded, and I’m grateful for every bit of chaos they bring.</p>
+
+        <p>Someone who inspires me deeply is Stephen Curry. His openness about his Christian faith, even on the biggest stage, reminds me that success doesn’t mean hiding what you believe in — it means standing firm in it.</p>
+
+        <p>My faith is the foundation of everything I do. I’m a devoted Christian and an active member of Bethlehem Lutheran, where I’ve found a strong community that supports both spiritual and personal growth.</p>
+
+        <p>In the future, I hope to combine my skills in business, technology, and faith to make a meaningful impact — whether through entrepreneurship, mentorship, or service. I believe purpose and progress go hand in hand.</p>
+
+        <p>Every day, I try to live with gratitude and intention — learning, leading, and trusting that where I’m headed is exactly where I’m meant to be.</p>
     </div>
 
-    <!-- Optional: JS for Dark/Light Mode -->
     <script>
-        const toggle = document.getElementById("toggle-dark");
-        toggle.addEventListener("click", () => {
+        // Sidebar toggle
+        const sidebar = document.getElementById("sidebar");
+        const hamburger = document.getElementById("hamburger");
+        const titles = document.querySelectorAll(".sidebar-links .title");
+        const content = document.querySelector(".content");
+
+        hamburger.addEventListener("click", () => {
+            sidebar.classList.toggle("shrunk");
+            titles.forEach(title => title.classList.toggle("hidden"));
+            content.classList.toggle("expanded");
+        });
+
+        // Dark mode toggle
+        const toggleDark = document.getElementById("toggle-dark");
+        toggleDark.addEventListener("click", () => {
             document.body.classList.toggle("light-mode");
         });
     </script>
