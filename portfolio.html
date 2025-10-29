@@ -3,58 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Samuel McL Franks II</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <title>Portfolio - Samuel McL Franks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-links">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">🖼️ Portfolio</a>
-            <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">📚 Resources</a>
-            <a href="sports.html">🏀 Sports</a>
-            <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
-        </div>
-        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
-    </div>
-
     <!-- Header -->
-    <header>Samuel McL Franks II</header>
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sidebar-links">
+            <a href="index.html">🏠 <span class="title">Home</span></a>
+            <a href="about.html">👤 <span class="title">About Me</span></a>
+            <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
+            <a href="resume.html">📄 <span class="title">Resume</span></a>
+            <a href="resources.html">📚 <span class="title">Resources</span></a>
+            <a href="sports.html">🏀 <span class="title">Sports</span></a>
+            <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
+            <a href="social.html">🌐 <span class="title">Social Media</span></a>
+            <a href="contact.html">📞 <span class="title">Contact</span></a>
+        </div>
+        <button id="toggle-dark">🌙</button>
+    </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h2>Portfolio</h2>
-        <p>Welcome to my portfolio. Here are some of the projects and works I’ve been involved in:</p>
+        <p>My portfolio highlights the blend of creativity, technology, and leadership that defines my approach to work and study. Each project represents growth — both technically and personally.</p>
 
-        <!-- Portfolio items placeholders -->
-        <div class="portfolio-item">
-            <h3>Project Title 1</h3>
-            <p>Short description of the project, technologies used, and your role.</p>
-        </div>
+        <h2>Featured Projects</h2>
 
-        <div class="portfolio-item">
-            <h3>Project Title 2</h3>
-            <p>Short description of the project, technologies used, and your role.</p>
-        </div>
+        <p><strong>AI and the Image of God Essay</strong><br>
+        A written reflection connecting artificial intelligence with biblical teachings on human uniqueness and creativity. This piece explores how faith can guide innovation responsibly.</p>
 
-        <div class="portfolio-item">
-            <h3>Project Title 3</h3>
-            <p>Short description of the project, technologies used, and your role.</p>
-        </div>
+        <p><strong>Trinity Business Leadership Analysis</strong><br>
+        A case study on effective leadership principles learned through Trinity’s MBA program. Focuses on communication, stewardship, and leading through integrity.</p>
 
-        <!-- Add more projects as needed -->
+        <p><strong>Personal Branding Website</strong><br>
+        This site itself — fully designed and built to reflect my personality, values, and professional path. Every page was structured to be simple, modern, and faith-centered.</p>
+
+        <p><strong>Sports Performance & Faith Journal</strong><br>
+        A weekly digital journal tracking basketball and soccer training while connecting physical discipline with spiritual growth.</p>
+
+        <p><strong>Investment Learning Series</strong><br>
+        Ongoing research and experiments with stock trading and market education. I’ve built models for short-term investment strategy testing.</p>
+
+        <h2>Future Goals</h2>
+        <p>My goal is to continue developing a portfolio that merges business, AI, and faith — showing how these elements can coexist to inspire ethical innovation and meaningful work.</p>
     </div>
 
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        // Sidebar toggle
+        const sidebar = document.getElementById("sidebar");
+        const hamburger = document.getElementById("hamburger");
+        const titles = document.querySelectorAll(".sidebar-links .title");
+        const content = document.querySelector(".content");
+
+        hamburger.addEventListener("click", () => {
+            sidebar.classList.toggle("shrunk");
+            titles.forEach(title => title.classList.toggle("hidden"));
+            content.classList.toggle("expanded");
+        });
+
+        // Dark mode toggle
+        const toggleDark = document.getElementById("toggle-dark");
+        toggleDark.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
         });
     </script>
 </body>
