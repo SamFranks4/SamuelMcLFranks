@@ -119,6 +119,40 @@ header {
     transition: margin-left 0.3s, background 0.3s, color 0.3s;
 }
 
+/* Social Cards (for social.html) */
+.social-card {
+    background-color: #001f3f; /* dark navy */
+    color: #f5f5dc; /* beige text */
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.social-card a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2em;
+}
+
+.social-card:hover {
+    background-color: #003366; /* slightly lighter navy */
+    transform: translateY(-3px);
+}
+
+/* Sidebar shrink effect for social cards */
+.sidebar.shrunk .sidebar-links .title {
+    display: none;
+}
+
+.sidebar.shrunk {
+    width: 60px;
+}
+
+.sidebar.shrunk ~ .content {
+    margin-left: 80px; /* adjust based on shrunken width */
+}
+
 /* Light Mode */
 body.light-mode {
     background-color: #f5f5dc; /* Beige */
@@ -142,6 +176,15 @@ body.light-mode .sidebar-links a {
 body.light-mode #toggle-dark {
     background-color: #003366;
     color: #f5f5dc;
+}
+
+body.light-mode .social-card {
+    background-color: #cce0ff;
+    color: #001f3f;
+}
+
+body.light-mode .social-card:hover {
+    background-color: #99bbff;
 }
 
 /* Dark Mode */
