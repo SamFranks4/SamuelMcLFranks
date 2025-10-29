@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Verses</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Collapsible verse sections */
+        .verse-section {
+            margin-bottom: 15px;
+        }
+        .verse-section button {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: 1px solid #001f3f;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            color: inherit;
+            transition: background 0.3s;
+        }
+        .verse-section button:hover {
+            background-color: #003366;
+        }
+        .verse-content {
+            display: none;
+            padding: 10px;
+            border-left: 2px solid #001f3f;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>Samuel McL. Franks</header>
@@ -30,47 +57,68 @@
     </div>
 
     <div class="content">
+        <h1>Faith & Reflection</h1>
+        <p>
+            My faith is the foundation of everything I do. I strive to follow these Scriptures daily, letting them guide my decisions, actions, and interactions. Each verse reminds me to grow in character, discipline, and love, and challenges me to become the best version of myself. I approach life with gratitude, reflection, and a desire to walk in alignment with God’s purpose.
+        </p>
+
         <h1>Favorite Bible Verses</h1>
 
-        <section>
-            <h2>Romans 7:19-20</h2>
-            <p>For I do not do the good I want, but the evil I do not want is what I keep on doing. Now if I do what I do not want, it is no longer I who do it, but sin that dwells within me.</p>
-        </section>
+        <div class="verse-section">
+            <button onclick="toggleVerse(this)">Romans 7:19-20</button>
+            <div class="verse-content">
+                For I do not do the good I want, but the evil I do not want is what I keep on doing. Now if I do what I do not want, it is no longer I who do it, but sin that dwells within me.
+            </div>
+        </div>
 
-        <section>
-            <h2>Colossians 1:10</h2>
-            <p>So as to walk in a manner worthy of the Lord, fully pleasing to him, bearing fruit in every good work and increasing in the knowledge of God.</p>
-        </section>
+        <div class="verse-section">
+            <button onclick="toggleVerse(this)">Colossians 1:10</button>
+            <div class="verse-content">
+                So as to walk in a manner worthy of the Lord, fully pleasing to him, bearing fruit in every good work and increasing in the knowledge of God.
+            </div>
+        </div>
 
-        <section>
-            <h2>James 2:10</h2>
-            <p>For whoever keeps the whole law but fails in one point has become accountable for all of it.</p>
-        </section>
+        <div class="verse-section">
+            <button onclick="toggleVerse(this)">James 2:10</button>
+            <div class="verse-content">
+                For whoever keeps the whole law but fails in one point has become accountable for all of it.
+            </div>
+        </div>
 
-        <section>
-            <h2>Proverbs 18:24</h2>
-            <p>A man of many companions may come to ruin, but there is a friend who sticks closer than a brother.</p>
-        </section>
+        <div class="verse-section">
+            <button onclick="toggleVerse(this)">Proverbs 18:24</button>
+            <div class="verse-content">
+                A man of many companions may come to ruin, but there is a friend who sticks closer than a brother.
+            </div>
+        </div>
 
-        <section>
-            <h2>Mark 11:23</h2>
-            <p>Truly, I say to you, whoever says to this mountain, ‘Be taken up and thrown into the sea,’ and does not doubt in his heart, but believes that what he says will come to pass, it will be done for him.</p>
-        </section>
+        <div class="verse-section">
+            <button onclick="toggleVerse(this)">Mark 11:23</button>
+            <div class="verse-content">
+                Truly, I say to you, whoever says to this mountain, ‘Be taken up and thrown into the sea,’ and does not doubt in his heart, but believes that what he says will come to pass, it will be done for him.
+            </div>
+        </div>
 
-        <section>
-            <h2>1 Corinthians 6:18</h2>
-            <p>Flee from sexual immorality. Every other sin a person commits is outside the body, but the sexually immoral person sins against his own body.</p>
-        </section>
+        <div class="verse-section">
+            <button onclick="toggleVerse(this)">1 Corinthians 6:18</button>
+            <div class="verse-content">
+                Flee from sexual immorality. Every other sin a person commits is outside the body, but the sexually immoral person sins against his own body.
+            </div>
+        </div>
 
-        <section>
-            <h2>Mark 9:43</h2>
-            <p>And if your hand causes you to sin, cut it off. It is better for you to enter life crippled than with two hands to go to hell, to the unquenchable fire.</p>
-        </section>
+        <div class="verse-section">
+            <button onclick="toggleVerse(this)">Mark 9:43</button>
+            <div class="verse-content">
+                And if your hand causes you to sin, cut it off. It is better for you to enter life crippled than with two hands to go to hell, to the unquenchable fire.
+            </div>
+        </div>
 
-        <section>
-            <h2>Ecclesiastes 7:15</h2>
-            <p>In this meaningless life of mine I have seen both of these: the righteous perishing in their righteousness, and the wicked living long in their wickedness.</p>
-        </section>
+        <div class="verse-section">
+            <button onclick="toggleVerse(this)">Ecclesiastes 7:15</button>
+            <div class="verse-content">
+                In this meaningless life of mine I have seen both of these: the righteous perishing in their righteousness, and the wicked living long in their wickedness.
+            </div>
+        </div>
     </div>
 
     <script>
@@ -81,6 +129,11 @@
 
         function toggleDark() {
             document.body.classList.toggle('light-mode');
+        }
+
+        function toggleVerse(button) {
+            const content = button.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>
