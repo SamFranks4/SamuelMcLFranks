@@ -3,56 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Samuel McL Franks II</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <title>Contact - Samuel McL Franks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-links">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">🖼️ Portfolio</a>
-            <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">📚 Resources</a>
-            <a href="sports.html">🏀 Sports</a>
-            <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
-        </div>
-        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
-    </div>
-
     <!-- Header -->
-    <header>Samuel McL Franks II</header>
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sidebar-links">
+            <a href="index.html">🏠 <span class="title">Home</span></a>
+            <a href="about.html">👤 <span class="title">About Me</span></a>
+            <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
+            <a href="resume.html">📄 <span class="title">Resume</span></a>
+            <a href="resources.html">📚 <span class="title">Resources</span></a>
+            <a href="sports.html">🏀 <span class="title">Sports</span></a>
+            <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
+            <a href="social.html">🌐 <span class="title">Social Media</span></a>
+            <a href="contact.html">📞 <span class="title">Contact</span></a>
+        </div>
+        <button id="toggle-dark">🌙</button>
+    </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h2>Contact Me</h2>
-        <p>You can reach me through any of the following methods:</p>
-        <ul>
-            <li><strong>Email:</strong> <a href="mailto:samfranks2007@gmail.com">samfranks2007@gmail.com</a></li>
-            <li><strong>Phone:</strong> 605-380-3938</li>
-            <li><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourprofile</a></li>
-        </ul>
+        <h2>Get in Touch</h2>
+        <p>If you’d like to reach me, here’s how:</p>
 
-        <h3>Send a Message</h3>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Your Name"><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="Your Email"><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea><br><br>
-            <button type="submit">Send</button>
-        </form>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:samfranks2007@gmail.com">samfranks2007@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+16053803938">605-380-3938</a></p>
+        </div>
+
+        <p>Feel free to contact me for collaborations, questions, or just to say hi!</p>
     </div>
 
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        // Sidebar toggle
+        const sidebar = document.getElementById("sidebar");
+        const hamburger = document.getElementById("hamburger");
+        const titles = document.querySelectorAll(".sidebar-links .title");
+        const content = document.querySelector(".content");
+
+        hamburger.addEventListener("click", () => {
+            sidebar.classList.toggle("shrunk");
+            titles.forEach(title => title.classList.toggle("hidden"));
+            content.classList.toggle("expanded");
+        });
+
+        // Dark mode toggle
+        const toggleDark = document.getElementById("toggle-dark");
+        toggleDark.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
         });
     </script>
 </body>
