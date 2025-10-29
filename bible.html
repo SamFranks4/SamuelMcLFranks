@@ -3,80 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Verses - Samuel McL Franks II</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <title>Bible Verses - Samuel McL Franks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-links">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">👤 About Me</a>
-            <a href="portfolio.html">🖼️ Portfolio</a>
-            <a href="resume.html">📄 Resume</a>
-            <a href="resources.html">📚 Resources</a>
-            <a href="sports.html">🏀 Sports</a>
-            <a href="bible.html">📖 Bible Verses</a>
-            <a href="social.html">📱 Social Media</a>
-            <a href="contact.html">✉️ Contact</a>
-        </div>
-        <button id="toggle-dark">🌙 Toggle Dark/Light Mode</button>
-    </div>
-
     <!-- Header -->
-    <header>Samuel McL Franks II</header>
+    <header>
+        <h1>Bible Verses</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sidebar-links">
+            <a href="index.html">🏠 <span class="title">Home</span></a>
+            <a href="about.html">👤 <span class="title">About Me</span></a>
+            <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
+            <a href="resume.html">📄 <span class="title">Resume</span></a>
+            <a href="resources.html">📚 <span class="title">Resources</span></a>
+            <a href="sports.html">🏀 <span class="title">Sports</span></a>
+            <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
+            <a href="social.html">🌐 <span class="title">Social Media</span></a>
+            <a href="contact.html">📞 <span class="title">Contact</span></a>
+        </div>
+        <button id="toggle-dark">🌙</button>
+    </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h2>Bible Verses</h2>
-        <p>Here are some of my favorite Bible verses (ESV):</p>
+        <h2>Faith and Reflection</h2>
+        <p>These verses have shaped how I see purpose, discipline, and peace. Each one reminds me to stay grounded in what truly matters — not just what’s visible, but what’s eternal.</p>
 
-        <div class="verse">
-            <h3>Romans 7:19-22</h3>
-            <p>For I do not do the good I want, but the evil I do not want is what I keep on doing. ... For I delight in the law of God in my inner being, but I see in my members another law waging war against the law of my mind...</p>
+        <hr>
+
+        <div class="verse-block">
+            <h3>Proverbs 3:5-6</h3>
+            <p><em>“Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to Him, and He will make your paths straight.”</em></p>
+            <p class="reflection">This verse keeps me centered when life feels unpredictable — a reminder that surrender can be strength.</p>
         </div>
 
-        <div class="verse">
-            <h3>Colossians 1:10</h3>
-            <p>So as to walk in a manner worthy of the Lord, fully pleasing to him, bearing fruit in every good work and increasing in the knowledge of God.</p>
+        <div class="verse-block">
+            <h3>Isaiah 40:31</h3>
+            <p><em>“But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint.”</em></p>
+            <p class="reflection">Faith doesn’t remove exhaustion; it transforms it into endurance.</p>
         </div>
 
-        <div class="verse">
-            <h3>James 2:10</h3>
-            <p>For whoever keeps the whole law but fails in one point has become accountable for all of it.</p>
+        <div class="verse-block">
+            <h3>John 1:1-5</h3>
+            <p><em>“In the beginning was the Word, and the Word was with God, and the Word was God.”</em></p>
+            <p class="reflection">The start of everything — light breaking through chaos. That’s where creation and creativity meet.</p>
         </div>
 
-        <div class="verse">
-            <h3>Proverbs 18:24</h3>
-            <p>A man of many companions may come to ruin, but there is a friend who sticks closer than a brother.</p>
-        </div>
+        <hr>
 
-        <div class="verse">
-            <h3>Mark 11:23</h3>
-            <p>Truly, I say to you, whoever says to this mountain, ‘Be taken up and thrown into the sea,’ and does not doubt in his heart, but believes that what he says will come to pass, it will be done for him.</p>
-        </div>
-
-        <div class="verse">
-            <h3>1 Corinthians 6:18</h3>
-            <p>Flee from sexual immorality. Every other sin a person commits is outside the body, but the sexually immoral person sins against his own body.</p>
-        </div>
-
-        <div class="verse">
-            <h3>Mark 9:43</h3>
-            <p>And if your hand causes you to sin, cut it off. It is better for you to enter life crippled than with two hands to go to hell, to the unquenchable fire.</p>
-        </div>
-
-        <div class="verse">
-            <h3>Ecclesiastes 7:15</h3>
-            <p>In this meaningless life of mine I have seen both of these: the righteous perishing in their righteousness, and the wicked living long in their wickedness.</p>
-        </div>
+        <p><em>“Let the Word live through your work, not just your words.”</em></p>
     </div>
 
     <script>
-        const toggleButton = document.getElementById('toggle-dark');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        // Sidebar toggle
+        const sidebar = document.getElementById("sidebar");
+        const hamburger = document.getElementById("hamburger");
+        const titles = document.querySelectorAll(".sidebar-links .title");
+        const content = document.querySelector(".content");
+
+        hamburger.addEventListener("click", () => {
+            sidebar.classList.toggle("shrunk");
+            titles.forEach(title => title.classList.toggle("hidden"));
+            content.classList.toggle("expanded");
+        });
+
+        // Dark mode toggle
+        const toggleDark = document.getElementById("toggle-dark");
+        toggleDark.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
         });
     </script>
 </body>
