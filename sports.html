@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports - Samuel McL Franks</title>
+    <title>Sports</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Sports</h1>
-    </header>
+    <header>Samuel McL Franks II</header>
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <div class="hamburger" id="hamburger">
+    <div class="sidebar">
+        <div class="hamburger" onclick="toggleSidebar()">
             <div></div>
             <div></div>
             <div></div>
@@ -28,80 +24,41 @@
             <a href="sports.html">🏀 <span class="title">Sports</span></a>
             <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
             <a href="social.html">🌐 <span class="title">Social Media</span></a>
-            <a href="contact.html">📞 <span class="title">Contact</span></a>
+            <a href="contact.html">✉️ <span class="title">Contact</span></a>
         </div>
-        <button id="toggle-dark">🌙</button>
+        <button id="toggle-dark" onclick="toggleDarkMode()">🌙</button>
     </div>
 
-    <!-- Main Content -->
     <div class="content">
-        <h2>My Sports Journey</h2>
-        <p>Sports have been one of the biggest teachers in my life — discipline, teamwork, and resilience all came from the court. Basketball, especially, has been more than a game for me; it’s been a foundation for growth, leadership, and community.</p>
+        <h1>My Sports Journey</h1>
 
-        <hr>
+        <p>Growing up in Aberdeen, sports have always been a major part of my life. I played basketball and soccer throughout my youth, constantly striving to improve and compete at higher levels. My senior year of high school was particularly transformative as I transferred from Aberdeen Central to Aberdeen Roncalli and experienced a significant growth spurt, going from 5'9" to 6'4".</p>
 
-        <h3>🏀 Basketball Statistics</h3>
-        <table class="stats-table">
-            <tr>
-                <th>Season</th>
-                <th>Team</th>
-                <th>PPG</th>
-                <th>RPG</th>
-                <th>APG</th>
-                <th>SPG</th>
-            </tr>
-            <tr>
-                <td>2023-2024</td>
-                <td>Aberdeen Central</td>
-                <td>17.4</td>
-                <td>6.2</td>
-                <td>3.1</td>
-                <td>1.8</td>
-            </tr>
-            <tr>
-                <td>2022-2023</td>
-                <td>Aberdeen Central</td>
-                <td>14.9</td>
-                <td>5.8</td>
-                <td>2.7</td>
-                <td>1.5</td>
-            </tr>
-        </table>
+        <p>Basketball has always been my dream, and I feel incredibly blessed to continue pursuing it at the collegiate level here at Trinity Bible College. The dedication, hard work, and perseverance required have shaped not just my athletic career, but also my character and discipline off the court.</p>
 
-        <hr>
-
-        <h3>🏆 Accolades & Highlights</h3>
+        <h2>Statistics</h2>
+        <h3>2024 - 2025 Aberdeen Roncalli</h3>
         <ul>
-            <li>All-Conference First Team (2024)</li>
-            <li>Team Captain – Varsity Basketball</li>
-            <li>1,000+ Career Points</li>
-            <li>Regional Championship Winner (2023)</li>
-            <li>State Tournament Appearance (2024)</li>
+            <li>Points per game: 17.0</li>
+            <li>Assists per game: 4.2</li>
+            <li>Rebounds per game: 4.4</li>
+            <li>Steals per game: 1.8</li>
+            <li>Blocks per game: 0.9</li>
         </ul>
 
-        <hr>
-
-        <p><em>“It’s not about the points you score — it’s about how you lift your team when the game’s on the line.”</em></p>
+        <h3>2025 - 2026 Trinity Bible</h3>
+        <p>Stats not yet available.</p>
     </div>
 
     <script>
-        // Sidebar toggle
-        const sidebar = document.getElementById("sidebar");
-        const hamburger = document.getElementById("hamburger");
-        const titles = document.querySelectorAll(".sidebar-links .title");
-        const content = document.querySelector(".content");
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('shrunk');
+        }
 
-        hamburger.addEventListener("click", () => {
-            sidebar.classList.toggle("shrunk");
-            titles.forEach(title => title.classList.toggle("hidden"));
-            content.classList.toggle("expanded");
-        });
-
-        // Dark mode toggle
-        const toggleDark = document.getElementById("toggle-dark");
-        toggleDark.addEventListener("click", () => {
-            document.body.classList.toggle("light-mode");
-        });
+        function toggleDarkMode() {
+            document.body.classList.toggle('light-mode');
+        }
     </script>
 </body>
 </html>
