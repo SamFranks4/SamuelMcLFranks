@@ -3,66 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media - Samuel McL Franks</title>
+    <title>Social Media - Samuel McL Franks II</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Social Media</h1>
-    </header>
-
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <div class="hamburger" id="hamburger">
+    <div class="sidebar">
+        <div class="hamburger" onclick="toggleSidebar()">
             <div></div>
             <div></div>
             <div></div>
         </div>
         <div class="sidebar-links">
-            <a href="index.html">🏠 <span class="title">Home</span></a>
-            <a href="about.html">👤 <span class="title">About Me</span></a>
-            <a href="portfolio.html">💼 <span class="title">Portfolio</span></a>
-            <a href="resume.html">📄 <span class="title">Resume</span></a>
-            <a href="resources.html">📚 <span class="title">Resources</span></a>
-            <a href="sports.html">🏀 <span class="title">Sports</span></a>
-            <a href="bible.html">📖 <span class="title">Bible Verses</span></a>
-            <a href="social.html">🌐 <span class="title">Social Media</span></a>
-            <a href="contact.html">📞 <span class="title">Contact</span></a>
+            <a href="index.html">🏠<span class="title">Home</span></a>
+            <a href="about.html">🧑<span class="title">About Me</span></a>
+            <a href="portfolio.html">💼<span class="title">Portfolio</span></a>
+            <a href="resume.html">📄<span class="title">Resume</span></a>
+            <a href="resources.html">📚<span class="title">Resources</span></a>
+            <a href="sports.html">🏀<span class="title">Sports</span></a>
+            <a href="bible.html">📖<span class="title">Bible Verses</span></a>
+            <a href="social.html">🌐<span class="title">Social Media</span></a>
+            <a href="contact.html">✉️<span class="title">Contact</span></a>
         </div>
-        <button id="toggle-dark">🌙</button>
+        <button id="toggle-dark" onclick="toggleDarkMode()">🌙</button>
     </div>
+
+    <!-- Header -->
+    <header>Samuel McL Franks II</header>
 
     <!-- Main Content -->
     <div class="content">
-        <h2>Connect With Me</h2>
-        <p>Here’s where you can follow me:</p>
+        <h2>Connect with Me</h2>
+        <div class="social-card">
+            <h3>Instagram</h3>
+            <p>Follow my daily life and basketball highlights.</p>
+            <a href="https://www.instagram.com/sam_franks4" target="_blank">@sam_franks4</a>
+        </div>
 
-        <div class="social-links">
-            <p>📸 <a href="https://www.instagram.com/sam_franks4/" target="_blank">Instagram: sam_franks4</a></p>
-            <p>🎵 <a href="https://www.tiktok.com/@sam_franks4" target="_blank">TikTok: sam_franks4</a></p>
-            <p>👻 <a href="https://www.snapchat.com/add/sam_franks4" target="_blank">Snapchat: sam_franks4</a></p>
+        <div class="social-card">
+            <h3>TikTok</h3>
+            <p>Catch my short clips and fun videos.</p>
+            <a href="https://www.tiktok.com/@sam_franks4" target="_blank">@sam_franks4</a>
+        </div>
+
+        <div class="social-card">
+            <h3>Snapchat</h3>
+            <p>See behind-the-scenes moments.</p>
+            <a href="https://www.snapchat.com/add/sam_franks4" target="_blank">@sam_franks4</a>
+        </div>
+
+        <div class="social-card">
+            <h3>X (Twitter)</h3>
+            <p>Quick thoughts, updates, and links.</p>
+            <a href="https://x.com/SamFranks2007" target="_blank">@SamFranks2007</a>
         </div>
     </div>
 
     <script>
-        // Sidebar toggle
-        const sidebar = document.getElementById("sidebar");
-        const hamburger = document.getElementById("hamburger");
-        const titles = document.querySelectorAll(".sidebar-links .title");
-        const content = document.querySelector(".content");
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('shrunk');
+        }
 
-        hamburger.addEventListener("click", () => {
-            sidebar.classList.toggle("shrunk");
-            titles.forEach(title => title.classList.toggle("hidden"));
-            content.classList.toggle("expanded");
-        });
-
-        // Dark mode toggle
-        const toggleDark = document.getElementById("toggle-dark");
-        toggleDark.addEventListener("click", () => {
-            document.body.classList.toggle("light-mode");
-        });
+        function toggleDarkMode() {
+            document.body.classList.toggle('light-mode');
+        }
     </script>
 </body>
 </html>
